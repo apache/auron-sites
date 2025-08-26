@@ -1,5 +1,5 @@
-<template><div><h1 id="blaze-related-use-cases-and-publications" tabindex="-1"><a class="header-anchor" href="#blaze-related-use-cases-and-publications"><span>Blaze Related Use Cases and Publications</span></a></h1>
-<p>For more information about Blaze, please refer to the following links.</p>
+<template><div><h1 id="auron-related-use-cases-and-publications" tabindex="-1"><a class="header-anchor" href="#auron-related-use-cases-and-publications"><span>Auron Related Use Cases and Publications</span></a></h1>
+<p>For more information about Auron, please refer to the following links.</p>
 <table class="my-table">
   <tr>
     <th>Title</th>
@@ -8,7 +8,7 @@
     <th>Reference</th>
   </tr>
   <tr>
-    <td>Blaze：SparkSQL Native算子优化在快手的深度优化及大规模应用实践</td>
+    <td>Auron：SparkSQL Native算子优化在快手的深度优化及大规模应用实践</td>
     <td>快手</td>
     <td>Jul 13 2024 </td>
     <td>
@@ -16,7 +16,7 @@
     </td>
   </tr>
    <tr>
-    <td>Blaze：SparkSQL Native 算子优化在快手的设计与实践</td>
+    <td>Auron：SparkSQL Native 算子优化在快手的设计与实践</td>
     <td>快手</td>
     <td>May 21 2023 </td>
     <td>

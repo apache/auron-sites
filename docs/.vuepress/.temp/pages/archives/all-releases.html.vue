@@ -6,6 +6,16 @@
     <th>Download</th>
   </tr>
    <tr>
+    <td>5.0.0</td>
+    <td>Apr 28 2025</td>
+    <td><a href="https://github.com/kwai/blaze/releases/tag/v5.0.0" target="_blank">download</a> </td>
+  </tr>
+  <tr>
+    <td>4.0.1</td>
+    <td>Dec 10 2024</td>
+    <td><a href="https://github.com/kwai/blaze/releases/tag/v4.0.1" target="_blank">download</a> </td>
+  </tr>
+  <tr>
     <td>4.0.0</td>
     <td>Oct 10 2024</td>
     <td><a href="https://github.com/kwai/blaze/releases/tag/v4.0.0" target="_blank">download</a> </td>
