@@ -6,64 +6,38 @@ title: Getting-Started
 
 ## Build from source
 
-To build Auron, please follow the steps below:
+To build Auron from source, follow the steps below:
 
 1. Install Rust
 
-The native execution lib is written in Rust. So you're required to install Rust (nightly) first for
-compilation. We recommend you to use [rustup](https://rustup.rs/).
+Auron's native execution lib is written in Rust. You need to install Rust (nightly) before compiling.
+
+We recommend using [rustup](https://rustup.rs/) for installation.
 
 2. Install JDK
 
-Auron has been well tested on jdk8/11/17, should work fine with higher versions.
+Auron has been well tested with JDK 8, 11, and 17.
+
+Make sure `JAVA_HOME` is properly set and points to your desired version.
 
 3. Check out the source code.
 
-```shell
-git clone git@github.com:kwai/auron.git
-cd auron
-```
-
 4. Build the project.
 
-Specify shims package of which spark version that you would like to run on.
+You can build Auron either *locally* or *inside Docker with CentOS7* using a unified script: `auron-build.sh`.
 
-Currently we have supported these shims:
+Run `./auron-build.sh --help` to see all available options.
 
-* spark-3.0 - for spark3.0.x
-* spark-3.1 - for spark3.1.x
-* spark-3.2 - for spark3.2.x
-* spark-3.3 - for spark3.3.x
-* spark-3.4 - for spark3.4.x
-* spark-3.5 - for spark3.5.x.
-
-You could either build Auron in pre mode for debugging or in release mode to unlock the full potential of
-Auron.
-
-```shell
-SHIM=spark-3.5 # or spark-3.0/spark-3.1/spark-3.2/spark-3.3/spark-3.4/spark-3.5
-MODE=release # or pre
-JDK=jdk-8
-./build/mvn package -P"${SHIM}" -P"${MODE}" -P${JDK}
-```
-
-After the build is finished, a fat Jar package that contains all the dependencies will be generated in the `target`
-directory.
-
-## Build with docker
-
-You can use the following command to build a centos-7 compatible release:
-```shell
-SHIM=spark-3.5 MODE=release ./release-docker.sh
-```
+After the build completes, a fat JAR with all dependencies will be generated in either the `target/` directory (for local builds)
+or `target-docker/` directory (for Docker builds), depending on the selected build mode.
 
 ## Run Spark Job with Auron Accelerator
 
 This section describes how to submit and configure a Spark Job with Auron support.
 
-1. move auron jar package to spark client classpath (normally `spark-xx.xx.xx/jars/`).
+1. Move the Auron JAR to the Spark client classpath (normally spark-xx.xx.xx/jars/).
 
-2. add the follow confs to spark configuration in `spark-xx.xx.xx/conf/spark-default.conf`:
+2. Add the following configs to spark configuration in `spark-xx.xx.xx/conf/spark-default.conf`:
 
 ```properties
 spark.auron.enable true
