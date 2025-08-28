@@ -1,152 +1,412 @@
 :root {
-    .vp-home {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 100%;
-        max-width: 100%;
-        margin: var(--navbar-height) 0 0 0;
-        padding: 0;
+  .vp-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    max-width: 100%;
+    margin: var(--navbar-height) 0 0 0;
+    padding: 0;
 
-        .vp-hero {
-            display: none;
-        }
+    .vp-hero {
+      display: none;
+    }
+  }
+
+  .home-banner {
+    display: flex;
+    padding: 2.0rem 15.0rem 2.0em 15.0rem;
+    background: linear-gradient(150deg, #459, #FFF);
+
+    .banner-title-container {
+      display: flex-inline;
+      width: 62%;
+      .banner-title {
+        padding-bottom: 1.0rem;
+        font-size: 2.0rem;
+        font-weight: bold;
+        color: #FFF;
+      }
+      .banner-subtitle {
+        padding-bottom: 1.0rem;
+        font-weight: 2.0rem;
+        max-width: 60%;
+        color: #FFF;
+      }
+      .github-buttons-container {
+        padding-bottom: 1.0rem;
+      }
     }
 
-    .home-banner {
+    .right-logo-container {
+      display: flex;
+      flex-direction: row;
+      width: 38%;
+    }
+  }
+
+  .home-para {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-items: center;
+
+    .para-title {
+      display: flex;
+      justify-content: center;
+      padding: 1.0em;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .para-text {
+      padding-bottom: 1rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .feature-container-wrapper {
+    display: flex;              /* Use flexbox layout with default horizontal direction */
+    margin: 2.0rem;
+    flex-wrap: wrap;
+    margin-top: 50px;           /* Set spacing between parent container and above elements */
+
+    .feature-container {
+      display: flex;               /* Use Flexbox layout */
+      max-width: 30%;
+      min-width: 30%;
+      flex-direction: column;      /* Set flex direction to vertical */
+      padding-left: 1%;
+      padding-right: 1%;
+      padding-bottom: 1rem;
+
+      .feature-title {
         display: flex;
-        padding: 2.0rem 15.0rem 2.0em 15.0rem;
-        background: linear-gradient(150deg, #459, #FFF);
+        font-size: 2.0rem;         /* Set title font size */
+        color: #333;                /* Set title color */
+        align-items: center;
+        img {
+          width: 3rem;                /* Icon width */
+          height: 3rem;               /* Icon height */
+          margin-right: 1rem;         /* Spacing between icon and title */
+        }
+      }
 
-        .banner-title-container {
-            display: flex-inline;
-            width: 62%;
-            .banner-title {
-                padding-bottom: 1.0rem;
-                font-size: 2.0rem;
-                font-weight: bold;
-                color: #FFF;
-            }
-            .banner-subtitle {
-                padding-bottom: 1.0rem;
-                font-weight: 2.0rem;
-                max-width: 60%;
-                color: #FFF;
-            }
-            .github-buttons-container {
-                padding-bottom: 1.0rem;
-            }
+      .feature-details {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .home-benchmark-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .home-benchmark-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .benchmark-chart-container {
+      display: flex;
+    }
+  }
+
+  .partners-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .partners {
+    width: 60%;
+    display: grid;  /* Use grid layout to arrange logos */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adaptive column count */
+    gap: 80px 40px;  /* Spacing between logos */
+    margin: 40px 0;  /* Add some space above and below the container */
+  }
+
+  /* Style for .partner-logo to center images */
+  .partner-logo {
+    display: flex;  /* Use Flexbox layout */
+    justify-content: center;  /* Horizontal center */
+    align-items: center;  /* Vertical center */
+    height: 100%;  /* Ensure container height is 100% */
+  }
+  /* Style for images in .partner-logo */
+  .partner-logo img {
+    width: 80%; /* Image width fills parent container */
+    height: auto; /* Maintain original aspect ratio */
+    transition: transform 0.3s ease-in-out;  /* Add animation effect */
+  }
+
+  /* Image hover effect */
+  .partner-logo img:hover {
+    transform: scale(1.1);  /* Scale image on hover */
+    opacity: 0.8;  /* Fade effect */
+  }
+
+  /* Responsive breakpoints */
+
+  /* Large tablets and small desktops (768px - 1024px) */
+  @media (max-width: 1024px) {
+    .home-banner {
+      padding: 2.0rem 8.0rem 2.0rem 8.0rem;
+
+      .banner-title-container {
+        width: 70%;
+
+        .banner-title {
+          font-size: 1.8rem;
         }
 
-        .right-logo-container {
-            display: flex;
-            flex-direction: row;
-            width: 38%;
+        .banner-subtitle {
+          max-width: 80%;
         }
+      }
+
+      .right-logo-container {
+        width: 30%;
+      }
     }
 
     .home-para {
-        display: flex;
-        flex-direction: column;
-        padding-left: 10%;
-        padding-right: 10%;
-        justify-items: center;
-
-        .para-title {
-            display: flex;
-            justify-content: center;
-            padding: 1.0em;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .para-text {
-            padding-bottom: 1rem;
-            width: 100%;
-            text-align: center;
-        }
+      padding-left: 5%;
+      padding-right: 5%;
     }
 
     .feature-container-wrapper {
-        display: flex;              /* 使用 flexbox 布局，默认方向为水平排列 */
-        margin: 2.0rem;
-        flex-wrap: wrap;
-        margin-top: 50px;           /* 设置父容器与上方元素之间的间距 */
+      margin: 1.5rem;
 
-        .feature-container {
-            display: flex;               /* 使用 Flexbox 布局 */
-            max-width: 30%;
-            min-width: 30%;
-            flex-direction: column;      /* 设置 flex 方向为垂直排列 */
-            padding-left: 1%;
-            padding-right: 1%;
-            padding-bottom: 1rem;
+      .feature-container {
+        max-width: 48%;
+        min-width: 48%;
 
-            .feature-title {
-                display: flex;
-                font-size: 2.0rem;         /* 设置标题字体大小 */
-                color: #333;                /* 设置标题颜色 */
-                align-items: center;
-                img {
-                    width: 3rem;                /* 图标宽度 */
-                    height: 3rem;               /* 图标高度 */
-                    margin-right: 1rem;         /* 图标和标题之间的间距 */
-                }
-            }
+        .feature-title {
+          font-size: 1.5rem;
 
-            .feature-details {
-                font-size: 0.9rem;
-            }
+          img {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
         }
-    }
-
-    .home-benchmark-container-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .home-benchmark-container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-        .benchmark-chart-container {
-          display: flex;
-        }
-    }
-
-    .partners-container {
-        display: flex;
-        justify-content: center;
+      }
     }
 
     .partners {
-        width: 60%;
-        display: grid;  /* 使用网格布局来排列 logo */
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 自适应列数 */
-        gap: 80px 40px;  /* logo 之间的间距 */
-        margin: 40px 0;  /* 给容器上下添加一些空隙 */
+      width: 80%;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 60px 30px;
+    }
+  }
+
+  /* Tablets (768px and below) */
+  @media (max-width: 768px) {
+    .home-banner {
+      flex-direction: column;
+      padding: 2.0rem 4.0rem 2.0rem 4.0rem;
+      text-align: center;
+
+      .banner-title-container {
+        width: 100%;
+        margin-bottom: 2rem;
+
+        .banner-title {
+          font-size: 1.6rem;
+        }
+
+        .banner-subtitle {
+          max-width: 100%;
+          font-size: 1rem;
+        }
+      }
+
+      .right-logo-container {
+        width: 100%;
+        justify-content: center;
+
+        .right-logo img {
+          max-width: 200px;
+          height: auto;
+        }
+      }
     }
 
-    /* 为 .partner-logo 设置样式，使图片居中 */
-    .partner-logo {
-        display: flex;  /* 使用 Flexbox 布局 */
-        justify-content: center;  /* 水平居中 */
-        align-items: center;  /* 垂直居中 */
-        height: 100%;  /* 确保容器高度为100% */
+    .home-para {
+      padding-left: 3%;
+      padding-right: 3%;
+
+      .para-title {
+        font-size: 1.3rem;
+        padding: 0.8rem;
+      }
     }
-    /* 为 .partner-logo 中的图片添加样式 */
+
+    .feature-container-wrapper {
+      margin: 1rem;
+      flex-direction: column;
+      align-items: center;
+
+      .feature-container {
+        max-width: 90%;
+        min-width: 90%;
+        margin-bottom: 2rem;
+        text-align: left;
+
+        .feature-title {
+          font-size: 1.3rem;
+          justify-content: left;
+
+          img {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.5rem;
+          }
+        }
+
+        .feature-details {
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    .partners {
+      width: 90%;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 40px 20px;
+    }
+  }
+
+  /* Mobile devices (480px and below) */
+  @media (max-width: 480px) {
+    .home-banner {
+      padding: 1.5rem 2.0rem 1.5rem 2.0rem;
+
+      .banner-title-container {
+        .banner-title {
+          font-size: 1.4rem;
+          padding-bottom: 0.8rem;
+        }
+
+        .banner-subtitle {
+          font-size: 0.9rem;
+          padding-bottom: 0.8rem;
+        }
+
+        .github-buttons-container {
+          padding-bottom: 0.8rem;
+        }
+      }
+
+      .right-logo-container {
+        .right-logo img {
+          max-width: 150px;
+        }
+      }
+    }
+
+    .home-para {
+      padding-left: 2%;
+      padding-right: 2%;
+
+      .para-title {
+        font-size: 1.2rem;
+        padding: 0.6rem;
+      }
+
+      .para-text {
+        font-size: 0.9rem;
+      }
+    }
+
+    .feature-container-wrapper {
+      margin: 0.5rem;
+
+      .feature-container {
+        max-width: 95%;
+        min-width: 95%;
+        padding-left: 2%;
+        padding-right: 2%;
+
+        .feature-title {
+          font-size: 1.1rem;
+
+          img {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+
+        .feature-details {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .partners {
+      width: 95%;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 30px 15px;
+      margin: 30px 0;
+    }
+
     .partner-logo img {
-        width: 80%; /* 图片的宽度占满父容器 */
-        height: auto; /* 保持图片的原始纵横比 */
-        transition: transform 0.3s ease-in-out;  /* 添加动画效果 */
+      width: 90%;
+    }
+  }
+
+  /* Extra small devices (360px and below) */
+  @media (max-width: 360px) {
+    .home-banner {
+      padding: 1rem 1.5rem 1rem 1.5rem;
+
+      .banner-title-container {
+        .banner-title {
+          font-size: 1.2rem;
+        }
+
+        .banner-subtitle {
+          font-size: 0.8rem;
+        }
+      }
     }
 
-    /* 图片悬停效果 */
-    .partner-logo img:hover {
-        transform: scale(1.1);  /* 鼠标悬停时放大图片 */
-        opacity: 0.8;  /* 渐变效果 */
+    .home-para {
+      .para-title {
+        font-size: 1.1rem;
+      }
+
+      .para-text {
+        font-size: 0.8rem;
+      }
     }
+
+    .feature-container-wrapper {
+      .feature-container {
+        .feature-title {
+          font-size: 1rem;
+          flex-direction: column;
+          text-align: center;
+
+          img {
+            margin-right: 0;
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        .feature-details {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    .partners {
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+      gap: 20px 10px;
+    }
+  }
 }
