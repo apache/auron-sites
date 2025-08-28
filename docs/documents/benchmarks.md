@@ -12,6 +12,11 @@ Here is the benchmark result of TPC-DS 1TB Dataset, running under Spark-3.5.6 an
 
 Below is a brief introduction of how we run TPC-DS benchmark with Spark/Auron.
 
+## Get TPC-DS tools
+```
+git clone https://github.com/auron-project/tpcds-tools
+```
+
 ## Generate TPC-DS dataset
 
 Compile datagen tool (derived from [maropu/spark-tpcds-datagen](https://github.com/maropu/spark-tpcds-datagen])).
