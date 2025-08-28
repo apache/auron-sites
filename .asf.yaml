@@ -25,7 +25,7 @@ github:
 
 staging:
   profile: ~
-  whoami: staging-publish
+  whoami: asf-site-staging
 
-# publish:
-#   whoami: publish
+publish:
+  whoami: asf-site
