@@ -151,4 +151,4 @@ We're using [Discussions](https://github.com/apache/auron/discussions) to connec
 - Welcome others who are open-minded. Remember that this is a community we build together 💪 .
   
 ### WeChat Group
-We've set up a WeChat group to help Chinese developers communicate more effectively. If you'd like to join, please email us at auron@kwai.com.
+We've set up a WeChat group to help Chinese developers communicate more effectively. If you'd like to join, please email us at [auron@kwai.com](mailto:auron@kwai.com).

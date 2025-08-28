@@ -22,7 +22,7 @@ footer: Copyright © 2022-2025 The Apache Software Foundation, Licensed under th
 <div class="home-para">
   <div class="para-title">Cooperators</div>
   <div class="para-text">
-    Auron currently has some users and contributors. You are invited to join the list by emailing auron@kwai.com.
+    Auron currently has some users and contributors. You are invited to join the list by emailing <a href="mailto:auron@kwai.com">auron@kwai.com</a>.
   </div>
   <div class="partners-container">
     <div class="partners">
