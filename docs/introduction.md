@@ -3,7 +3,7 @@ title: Introduction
 ---
 
 ## Overview
-The [Auron](https://github.com/kwai/auron) accelerator for Apache Spark leverages native vectorized execution to accelerate query processing. It combines the power of the Apache Arrow-DataFusion library and the scale of the Spark distributed computing framework.
+The [Auron](https://github.com/apache/auron) accelerator for Apache Spark leverages native vectorized execution to accelerate query processing. It combines the power of the Apache Arrow-DataFusion library and the scale of the Spark distributed computing framework.
 
 
 ## Introduction
@@ -140,10 +140,10 @@ Most spark builtin expressions are supported in Auron (by translating to DataFus
 ## Join the Community
 
 ### Source Code
-Please see [Auron source code](https://github.com/kwai/auron) for more information.
+Please see [Auron source code](https://github.com/apache/auron) for more information.
 
 ### Community
-We're using [Discussions](https://github.com/kwai/auron/discussions) to connect with other members of our community. We hope that you:
+We're using [Discussions](https://github.com/apache/auron/discussions) to connect with other members of our community. We hope that you:
 
 - Ask questions you're wondering about.
 - Share ideas.
@@ -152,15 +152,3 @@ We're using [Discussions](https://github.com/kwai/auron/discussions) to connect 
   
 ### WeChat Group
 We've set up a WeChat group to help Chinese developers communicate more effectively. If you'd like to join, please email us at auron@kwai.com.
-## Performance
-
-Check [Benchmark Results](https://github.com/kwai/auron/blob/v4.0.0/benchmark-results/20240701-auron300.md) with the latest date for the performance comparison with vanilla Spark 3.3.3. The benchmark result shows that Auron save about 50% time on TPC-DS/TPC-H 1TB datasets. Stay tuned and join us for more upcoming thrilling numbers.
-
-![Auron-TPC-DS-1TB-Benchmark](./img/Auron-TPC-DS-1TB-Benchmark.png)
-
-## Thanks to our contributors
-
-<br>
-<a href="https://github.com/kwai/auron/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=kwai/auron" />
-</a>
