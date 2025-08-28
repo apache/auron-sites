@@ -46,6 +46,7 @@ All supported operators in Auron are listed below. Auron does support fallbackin
 Most spark builtin expressions are supported in Auron (by translating to DataFusion-physical-exprs). Auron also supports expression-level fallbacking, which can fallback a single unsupported expression to spark execution. so SQLs containing some unsupported expressions like UDF/UDTFs can still be optimized.
 
 <table class="my-table3">
+  <tbody>
   <tr>
     <th>Native Operator</th>
     <th>Note</th>
@@ -64,7 +65,7 @@ Most spark builtin expressions are supported in Auron (by translating to DataFus
   </tr>
   <tr>
     <td>NativeShuffleExchange</td>
-    <td>Range partitioning is not supported at the moment.</td>
+    <td></td>
   </tr>
   <tr>
     <td>NativeBroadcastExchange</td>
@@ -100,7 +101,10 @@ Most spark builtin expressions are supported in Auron (by translating to DataFus
   </tr>
   <tr>
     <td>NativeWindow</td>
-    <td>Only the default range [unboundedPreceding, currentRow] is supported.</td>
+    <td rowspan="2">Only the default range [unboundedPreceding, currentRow] is supported.</td>
+  </tr>
+  <tr>
+    <td>NativeWindowGroupLimit</td>
   </tr>
   <tr>
     <td>NativeExpand</td>
@@ -108,11 +112,11 @@ Most spark builtin expressions are supported in Auron (by translating to DataFus
   </tr>
   <tr>
     <td>NativeGenerate</td>
-    <td></td>
+    <td>Supports user-specified table function (UDTF)</td>
   </tr>
   <tr>
     <td>NativeHashAggregate</td>
-    <td rowspan="2">UDAF is not supported at the moment.</td>
+    <td rowspan="2">Supports user-specified aggregate function (UDAF)</td>
   </tr>
   <tr>
     <td>NativeSortAggregate</td>
@@ -130,6 +134,7 @@ Most spark builtin expressions are supported in Auron (by translating to DataFus
   <tr>
     <td>NativeBroadcastNestedLoopJoin</td>
   </tr>
+  </tbody>
 </table>
 
 ## Join the Community

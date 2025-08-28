@@ -69,9 +69,9 @@
 
   .feature-container-wrapper {
     display: flex;              /* Use flexbox layout with default horizontal direction */
-    margin: 2.0rem;
     flex-wrap: wrap;
-    margin-top: 50px;           /* Set spacing between parent container and above elements */
+    /* Set spacing between parent container and above elements */
+    margin: 50px 2.0rem 2.0rem;
 
     .feature-container {
       display: flex;               /* Use Flexbox layout */
@@ -259,7 +259,7 @@
 
         .feature-title {
           font-size: 1.3rem;
-          justify-content: left;
+          justify-content: center;
 
           img {
             width: 2rem;

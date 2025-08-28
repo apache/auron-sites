@@ -12,7 +12,7 @@ jobs:
       uses: IT4Change/vuepress-build-and-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_BRANCH: gh-pages
+        TARGET_BRANCH: asf-site
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: docs/.vuepress/dist/
         COMMIT_MESSAGE: Auto deploy from Github Actions
