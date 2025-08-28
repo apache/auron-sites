@@ -16,7 +16,7 @@ export default {
   components: { GithubButton },
   data() {
     return {
-      repo: "https://github.com/kwai/blaze",
+      repo: "https://github.com/apache/auron",
     }
   }
 }

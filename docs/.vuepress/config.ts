@@ -26,7 +26,6 @@ const sidebar: SidebarOptions = [
       '/archives/all-releases',
     ]
   },
-  { text: 'Blogs', link: '/references' },
 ];
 
 const navbar: NavbarOptions = [
@@ -42,7 +41,7 @@ const navbar: NavbarOptions = [
     { text: 'v4.0.0', link: '/archives/v4.0.0' },
     { text: 'All Archived Releases', link: '/archives/all-releases' },
   ]},
-  { text: 'Blogs', link: '/references' },
+  { text: 'ASF', link: 'https://www.apache.org/', target: '_blank', rel: 'noopener noreferrer' }, // Added link to Apache Software Foundation
 ];
 
 export default defineUserConfig({
@@ -57,7 +56,7 @@ export default defineUserConfig({
     home: '/',
     colorMode: 'light',
     colorModeSwitch: false,
-    repo: 'kwai/blaze',
+    repo: 'apache/auron',
     sidebarDepth: 1,
     lastUpdated: false,
     contributors: false,
