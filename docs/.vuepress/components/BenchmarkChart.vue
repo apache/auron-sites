@@ -23,7 +23,7 @@ const blazeResultValues = parseResultValues(blazeResults);
 // Responsive configuration based on screen size
 const getResponsiveConfig = () => {
   const width = window.innerWidth;
-  
+
   if (width <= 480) {
     // Mobile devices
     return {
@@ -65,7 +65,7 @@ const getResponsiveConfig = () => {
 
 const updateChartOption = () => {
   const config = getResponsiveConfig();
-  
+
   option.value = {
     toolbox: {
       feature: {
@@ -119,7 +119,7 @@ const updateChartOption = () => {
           data: [{ type: 'average', name: 'Average' }],
         },
       }, {
-        name: 'Auron-6.0.0-preview (dc8d7a9)',
+        name: 'Auron-6.0.0-preview (d72df24)',
         type: 'bar',
         barWidth: config.barWidth,
         data: blazeResultValues,
