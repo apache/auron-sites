@@ -157,3 +157,5 @@ Contact us through the following mailing list.
 ### Report Issues or Submit Pull Request
 
 If you meet any questions, connect us and fix it by submitting a 🔗[Pull Request](https://github.com/apache/auron/pulls).
+
+<Footer />

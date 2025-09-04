@@ -11,3 +11,5 @@ Table of contents
 - [4.0.0](./v4.0.0.md)
 - [3.0.1](./v3.0.1.md)
 - [All Archived Releases](./all-releases.md)
+
+<Footer />

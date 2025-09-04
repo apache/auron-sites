@@ -115,3 +115,5 @@ spark.auron.smjfallback.mem.threshold 512000000
 spark.auron.udafFallback.enable true
 spark.auron.partialAggSkipping.skipSpill true
 ```
+
+<Footer />

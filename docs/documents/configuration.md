@@ -175,3 +175,5 @@ title: Configurations
     <td>Enable native implemented get_json_object/json_tuple. May introduce inconsistency in special case (especially with illegal json inputs).</td>
   </tr>
 </table>
+
+<Footer />

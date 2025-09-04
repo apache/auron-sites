@@ -54,3 +54,5 @@ spark.executor.memoryOverhead 4096
 ```shell
 spark-sql -f tpcds/q01.sql
 ```
+
+<Footer />

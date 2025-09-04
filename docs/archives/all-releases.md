@@ -60,3 +60,5 @@ title: All Archived Releases
     <td><a href="https://github.com/apache/auron/releases/tag/v2.0.6" target="_blank">download</a> </td>
   </tr>
 </table>
+
+<Footer />
