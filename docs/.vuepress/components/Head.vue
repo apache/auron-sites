@@ -2,7 +2,7 @@
   <div class="home-banner">
     <div class="banner-title-container">
       <div class="banner-title">Run Spark SQL/DataFrame Faster</div>
-      <div class="banner-subtitle">Auron (original name: Blaze) is an accelerator for Apache Spark which leverages native vectorized execution to accelerate SQL/DataFrame queries.</div>
+      <div class="banner-subtitle">The Auron accelerator for big data engine (e.g., Spark, Flink) leverages native vectorized execution to accelerate query processing.</div>
       <div class="github-buttons-container"><GitHubBadge /></div>
       <a class="route-link auto-link vp-hero-action-button primary" href="/documents/getting-started" aria-label="Get Started">Get Started</a>
     </div>

@@ -1,6 +1,5 @@
 ---
 home: true
-footer: Copyright © 2022-2025 The Apache Software Foundation, Licensed under the Apache License, Version 2.0. Privacy Policy
 ---
 
 <Head />
@@ -22,7 +21,7 @@ footer: Copyright © 2022-2025 The Apache Software Foundation, Licensed under th
 <div class="home-para">
   <div class="para-title">Cooperators</div>
   <div class="para-text">
-    Auron currently has some users and contributors. You are invited to join the list by emailing auron@kwai.com.
+    Auron currently has some users and contributors. You are invited to join the list by emailing dev@auron.apache.org.
   </div>
   <div class="partners-container">
     <div class="partners">
@@ -47,3 +46,5 @@ footer: Copyright © 2022-2025 The Apache Software Foundation, Licensed under th
     </div>
   </div>
 </div>
+
+<Footer />

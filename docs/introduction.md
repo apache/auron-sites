@@ -142,13 +142,18 @@ Most spark builtin expressions are supported in Auron (by translating to DataFus
 ### Source Code
 Please see [Auron source code](https://github.com/apache/auron) for more information.
 
-### Community
-We're using [Discussions](https://github.com/apache/auron/discussions) to connect with other members of our community. We hope that you:
+## Community
 
-- Ask questions you're wondering about.
-- Share ideas.
-- Engage with other community members.
-- Welcome others who are open-minded. Remember that this is a community we build together 💪 .
-  
-### WeChat Group
-We've set up a WeChat group to help Chinese developers communicate more effectively. If you'd like to join, please email us at auron@kwai.com.
+### Subscribe Mailing Lists
+
+Mail List is the most recognized form of communication in the Apache community.
+Contact us through the following mailing list.
+
+| Name                                                       | Scope                           |                                                          |                                                               | 
+|:-----------------------------------------------------------|:--------------------------------|:---------------------------------------------------------|:--------------------------------------------------------------|
+| [dev@auron.apache.org](mailto:dev@auron.apache.org)  | Development-related discussions | [Subscribe](mailto:dev-subscribe@auron.apache.org)    | [Unsubscribe](mailto:dev-unsubscribe@auron.apache.org)     |
+
+
+### Report Issues or Submit Pull Request
+
+If you meet any questions, connect us and fix it by submitting a 🔗[Pull Request](https://github.com/apache/auron/pulls).
