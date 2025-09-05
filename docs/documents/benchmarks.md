@@ -48,7 +48,7 @@ mvn package -DskipTests
 ```
 
 Edit your `$SPARK_HOME/conf/spark-default.conf` to enable/disable Auron (see the following conf), then launch benchmark runner.
-If benchmarking with Auron, ensure that the Auron jar package is correctly built and moved into `$SPARK_HOME/jars`. ([How to build Auron?](https://github.com/kwai/auron/#build-from-source))
+If benchmarking with Auron, ensure that the Auron jar package is correctly built and moved into `$SPARK_HOME/jars`. ([How to build Auron?](https://github.com/apache/auron/#build-from-source))
 ```bash
 # use correct SPARK_HOME and data location
 SPARK_HOME=$HOME/software/spark ./bin/run \
