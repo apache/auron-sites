@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: vuepress-deploy
-      uses: IT4Change/vuepress-build-and-deploy@master
+      uses: ./.github/actions/vuepress-build-and-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_BRANCH: asf-site
