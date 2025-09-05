@@ -1,0 +1,3 @@
+[submodule ".github/actions/vuepress-build-and-deploy"]
+	path = .github/actions/vuepress-build-and-deploy
+	url = https://github.com/IT4Change/vuepress-build-and-deploy
