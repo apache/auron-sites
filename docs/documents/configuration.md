@@ -40,7 +40,7 @@ title: Configurations
   <tr>
     <td>spark.auron.partialAggSkipping.enable</td>
     <td>true</td>
-    <td>Enable partial aggregate skipping. (see https://github.com/auron-init/auron/issues/327)</td>
+    <td>Enable partial aggregate skipping. (see https://github.com/apache/auron/issues/327)</td>
   </tr>
   <tr>
     <td>spark.auron.partialAggSkipping.ratio</td>
