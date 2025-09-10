@@ -142,7 +142,32 @@ Most spark builtin expressions are supported in Auron (by translating to DataFus
 ### Source Code
 Please see [Auron source code](https://github.com/apache/auron) for more information.
 
-## Community
+### Cooperators
+
+Auron currently has some users and contributors:
+
+<div class="partners-container">
+  <div class="partners">
+    <div class="partner-logo"><img src="./img/logo/kwai.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/didiglobal.webp" /></div>
+    <div class="partner-logo"><img src="./img/logo/bilibili.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/xiecheng.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/car.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/58com.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/jjworld.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/tcl.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/yy.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/dmall.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/intsig.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/wanfang.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/brd.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/huaxia.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/ssc.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/hair.png" /></div>
+    <div class="partner-logo"><img src="./img/logo/dazhen.jpg" /></div>
+    <div class="partner-logo"><img src="./img/logo/lbxdyf.jpg" /></div>
+  </div>
+</div>
 
 ### Subscribe Mailing Lists
 
@@ -157,3 +182,4 @@ Contact us through the following mailing list.
 ### Report Issues or Submit Pull Request
 
 If you meet any questions, connect us and fix it by submitting a 🔗[Pull Request](https://github.com/apache/auron/pulls).
+
