@@ -123,10 +123,10 @@
   }
 
   .partners {
-    width: 60%;
+    width: 100%;
     display: grid;  /* Use grid layout to arrange logos */
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adaptive column count */
-    gap: 80px 40px;  /* Spacing between logos */
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* Adaptive column count */
+    gap: 80px 20px;  /* Spacing between logos */
     margin: 40px 0;  /* Add some space above and below the container */
   }
 

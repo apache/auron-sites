@@ -18,33 +18,4 @@ home: true
 </div>
 <hr/>
 
-<div class="home-para">
-  <div class="para-title">Cooperators</div>
-  <div class="para-text">
-    Auron currently has some users and contributors. You are invited to join the list by emailing dev@auron.apache.org.
-  </div>
-  <div class="partners-container">
-    <div class="partners">
-      <div class="partner-logo"><img src="./img/logo/kwai.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/didiglobal.webp" /></div>
-      <div class="partner-logo"><img src="./img/logo/bilibili.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/xiecheng.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/car.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/58com.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/jjworld.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/tcl.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/yy.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/dmall.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/intsig.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/wanfang.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/brd.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/huaxia.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/ssc.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/hair.png" /></div>
-      <div class="partner-logo"><img src="./img/logo/dazhen.jpg" /></div>
-      <div class="partner-logo"><img src="./img/logo/lbxdyf.jpg" /></div>
-    </div>
-  </div>
-</div>
-
 <Footer />
