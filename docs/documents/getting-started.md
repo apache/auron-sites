@@ -54,3 +54,44 @@ spark.executor.memoryOverhead 4096
 ```shell
 spark-sql -f tpcds/q01.sql
 ```
+## Integrating Auron with Remote Shuffle Services (RSS)
+
+Auron can be integrated with external Remote Shuffle Services to enhance shuffle performance and improve scalability.
+
+Currently, the following versions are supported: `Apache Celeborn` ( _0.5.4_ and _0.6_ ), and `Apache Uniffle` ( _0.9.2_ ).
+
+### Apache Celeborn
+
+Auron can work with Celeborn as a shuffle manager. Integration involves configuring Auron/Spark to use the AuronCelebornShuffleManager and pointing it to the appropriate Celeborn master endpoints and storage locations. This allows Spark jobs running on Auron to leverage Celeborn for distributed shuffling.
+
+You can integrate using the following example configuration:
+
+```properties
+spark.shuffle.manager org.apache.spark.sql.execution.auron.shuffle.celeborn.AuronCelebornShuffleManager
+spark.serializer org.apache.spark.serializer.KryoSerializer
+spark.celeborn.master.endpoints localhost:9097
+spark.celeborn.client.spark.shuffle.writer hash
+spark.sql.adaptive.localShuffleReader.enabled false
+```
+
+### Apache Uniffle
+
+Similarly, Auron also supports Uniffle, you need to configure Auron/Spark to use the AuronUniffleShuffleManager and specify the Uniffle coordinator endpoints.
+
+You can integrate using the following example configuration:
+
+```properties
+spark.shuffle.manager org.apache.spark.sql.execution.auron.shuffle.uniffle.AuronUniffleShuffleManager
+spark.serializer org.apache.spark.serializer.KryoSerializer
+spark.rss.coordinator.quorum <coordinatorIp1>:19999,<coordinatorIp2>:19999
+spark.rss.enabled true
+```
+
+### Notes
+1. Ensure the relevant RSS client JARs are included in your Spark application's classpath.
+
+2. Replace endpoints and directories with the actual addresses in your cluster.
+
+3. For detailed setup and advanced configuration, refer to the official documentation for the respective:
+   * [Celeborn](https://celeborn.apache.org/docs/latest/)
+   * [Uniffle](https://uniffle.apache.org/docs/client-guide)
