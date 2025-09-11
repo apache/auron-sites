@@ -27,23 +27,6 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_BRANCH: asf-site
-        BUILD_SCRIPT: yarn && yarn build
+        BUILD_SCRIPT: ./github/bin/build_docs.sh
         BUILD_DIR: docs/.vuepress/dist/
         COMMIT_MESSAGE: Auto deploy from Github Actions
-
-    - name: Checkout asf-site
-      if: github.event_name == 'pull_request'
-      uses: actions/checkout@master
-      with:
-        ref: asf-site
-
-    - name: asf-site-deploy
-      if: github.event_name == 'pull_request'
-      run: |   
-        git config --global user.name  "Auron"
-        git config --global user.email "dev@auron.apache.org"
-        echo 'publish:'           >> .asf.yaml
-        echo '  whoami: asf-site' >> .asf.yaml
-        git add .asf.yaml
-        git commit -m '.asf.yaml'
-        git push origin asf-site
