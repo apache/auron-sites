@@ -31,6 +31,12 @@ jobs:
         BUILD_DIR: docs/.vuepress/dist/
         COMMIT_MESSAGE: Auto deploy from Github Actions
 
+    - name: Checkout asf-site
+      if: github.event_name == 'pull_request'
+      uses: actions/checkout@master
+      with:
+        ref: asf-site
+
     - name: asf-site-deploy
       if: github.event_name == 'pull_request'
       run: |   
