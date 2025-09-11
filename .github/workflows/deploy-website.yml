@@ -30,3 +30,10 @@ jobs:
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: docs/.vuepress/dist/
         COMMIT_MESSAGE: Auto deploy from Github Actions
+
+    - run: |
+        echo 'publish:'           >> .asf.yaml
+        echo '  whoami: asf-site' >> .asf.yaml
+        git add .asf.yaml
+        git commit -m '.asf.yaml'
+        git push origin asf-site
