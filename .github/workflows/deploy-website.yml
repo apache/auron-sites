@@ -22,7 +22,7 @@ jobs:
       run: yarn && yarn build
 
     - name: vuepress-deploy
-      if: github.event_name != 'pull_request' && github.repository == 'apache/auron-sites'
+      if: github.event_name == 'pull_request'
       uses: ./.github/actions/vuepress-build-and-deploy
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
