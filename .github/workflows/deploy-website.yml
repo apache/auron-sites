@@ -1,6 +1,14 @@
 name: Build and Deploy
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - master
+      - branch-*
+  pull_request:
+    branches:
+      - master
+      - branch-*
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -10,8 +18,12 @@ jobs:
       with:
         submodules: recursive
 
+    - name: Install dependencies and build
+      run: yarn && yarn build
+
     - name: vuepress-deploy
-      uses: ./.github/actions/vuepress-build-and-deploy@master
+      if: github.event_name != 'pull_request'
+      uses: ./.github/actions/vuepress-build-and-deploy
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_BRANCH: asf-site
