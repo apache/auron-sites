@@ -76,78 +76,97 @@ title: Configurations
   <tr>
     <th>Parameters</th>
     <th>Default</th>
+    <th>Note</th>
   </tr>
   <tr>
     <td>spark.auron.enable.scan</td>
     <td>true</td>
+    <td>Enable/disable auron engine for scan.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.project</td>
     <td>true</td>
+    <td>Enable/disable converting ProjectExec to NativeProject."</td>
   </tr>
   <tr>
     <td>spark.auron.enable.filter</td>
     <td>true</td>
+    <td>Enable/disable converting FilterExec to NativeFilter.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.sort</td>
     <td>true</td>
+    <td>Enable/disable converting SortExec to NativeSort.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.union</td>
     <td>true</td>
+    <td>Enable/disable converting UnionExec to NativeUnion.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.smj</td>
     <td>true</td>
+    <td>Enable/disable converting SortMergeJoinExec to NativeSortMergeJoin.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.shj</td>
     <td>true</td>
+    <td>Enable/disable converting ShuffledHashJoinExec to NativeShuffledHashJoin.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.bhj</td>
     <td>true</td>
+    <td>Enable/disable converting BroadcastHashJoinExec to NativeBroadcastHashJoin.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.bnlj</td>
     <td>true</td>
+    <td>Enable/disable converting BroadcastNestedLoopJoinExec to NativeBroadcastNestedLoopJoin.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.local.limit</td>
     <td>true</td>
+    <td>Enable/disable converting LocalLimitExec to NativeLocalLimit.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.global.limit</td>
     <td>true</td>
+    <td>Enable/disable converting GlobalLimitExec to NativeGlobalLimit.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.take.ordered.and.project</td>
     <td>true</td>
+    <td>Enable/disable converting TakeOrderedAndProjectExec to NativeTakeOrderedAndProject.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.aggr</td>
     <td>true</td>
+    <td>Enable/disable converting HashAggregateExec/ObjectHashAggregateExec/SortAggregateExec to NativeAggregate.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.expand</td>
     <td>true</td>
+    <td>Enable/disable converting ExpandExec to NativeExpand.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.window</td>
     <td>true</td>
+    <td>Enable/disable converting WindowExec to NativeWindow.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.generate</td>
     <td>true</td>
+    <td>Enable/disable converting GenerateExec to NativeGenerate.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.local.table.scan</td>
     <td>true</td>
+    <td>Enable/disable converting LocalTableScanExec to NativeLocalTableScan.</td>
   </tr>
   <tr>
     <td>spark.auron.enable.data.writing</td>
     <td>false</td>
+    <td>Enable/disable converting DataWritingCommandExec to NativeDataWritingCommand.</td>
   </tr>
 
 </table>
