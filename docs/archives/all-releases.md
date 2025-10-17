@@ -10,6 +10,11 @@ title: All Archived Releases
     <th>Download</th>
   </tr>
    <tr>
+    <td>6.0.0-incubating</td>
+    <td>Oct 17 2025</td>
+    <td><a href="https://github.com/apache/auron/releases/tag/v6.0.0-incubating" target="_blank">download</a> </td>
+  </tr>
+   <tr>
     <td>5.0.0</td>
     <td>Apr 28 2025</td>
     <td><a href="https://github.com/apache/auron/releases/tag/v5.0.0" target="_blank">download</a> </td>
