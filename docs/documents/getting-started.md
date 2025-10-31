@@ -24,7 +24,7 @@ Make sure `JAVA_HOME` is properly set and points to your desired version.
 
 4. Build the project.
 
-You can build Auron either *locally* or *inside Docker with CentOS7* using a unified script: `auron-build.sh`.
+You can build Auron either *locally* or *inside Docker* using one of the supported OS images via the unified script: `auron-build.sh`.
 
 Run `./auron-build.sh --help` to see all available options.
 
@@ -58,7 +58,7 @@ spark-sql -f tpcds/q01.sql
 
 Auron can be integrated with external Remote Shuffle Services to enhance shuffle performance and improve scalability.
 
-Currently, the following versions are supported: `Apache Celeborn` ( _0.5.4_ and _0.6_ ), and `Apache Uniffle` ( _0.9.2_ ).
+Currently, `Apache Celeborn` and `Apache Uniffle` are supported. Please run `./auron-build.sh --help` for the up-to-date supported versions.
 
 ### Apache Celeborn
 
