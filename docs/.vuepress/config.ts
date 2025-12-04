@@ -48,13 +48,8 @@ const navbar: NavbarOptions = [
 
 export default defineUserConfig({
   base: '/',
-  title: 'Apache Auron (Incubating)',
-  head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/logo-mini.png' }],
-  ],
-
   theme: defaultTheme({
-    logo: '/logo-mini.png',
+    logo: '/auron-incubating-banner.png',
     home: '/',
     colorMode: 'light',
     colorModeSwitch: false,
