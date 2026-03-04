@@ -8,16 +8,22 @@ title: All Archived Releases
     <th>Version</th>
     <th>Date</th>
     <th>Download</th>
+    <th>Checksum</th>
+    <th>Signature</th>
   </tr>
    <tr>
     <td>7.0.0-incubating</td>
     <td>Mar 4 2026</td>
     <td><a href="https://dist.apache.org/repos/dist/release/incubator/auron/auron-7.0.0-incubating/apache-auron-7.0.0-incubating-source.tgz" target="_blank">download</a> </td>
+    <td><a href="https://dist.apache.org/repos/dist/release/incubator/auron/auron-7.0.0-incubating/apache-auron-7.0.0-incubating-source.tgz.sha512" target="_blank">sha512</a> </td>
+    <td><a href="https://dist.apache.org/repos/dist/release/incubator/auron/auron-7.0.0-incubating/apache-auron-7.0.0-incubating-source.tgz.asc" target="_blank">asc</a> </td>
   </tr>
    <tr>
     <td>6.0.0-incubating</td>
     <td>Oct 17 2025</td>
     <td><a href="https://dist.apache.org/repos/dist/release/incubator/auron/auron-6.0.0-incubating/apache-auron-6.0.0-incubating-source.tgz" target="_blank">download</a> </td>
+    <td><a href="https://dist.apache.org/repos/dist/release/incubator/auron/auron-6.0.0-incubating/apache-auron-6.0.0-incubating-source.tgz.sha512" target="_blank">sha512</a> </td>
+    <td><a href="https://dist.apache.org/repos/dist/release/incubator/auron/auron-6.0.0-incubating/apache-auron-6.0.0-incubating-source.tgz.asc" target="_blank">asc</a> </td>
   </tr>
    <tr>
     <td>5.0.0</td>
