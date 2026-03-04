@@ -12,12 +12,12 @@ title: All Archived Releases
    <tr>
     <td>7.0.0-incubating</td>
     <td>Feb 24 2026</td>
-    <td><a href="https://github.com/apache/auron/releases/tag/v7.0.0" target="_blank">download</a> </td>
+    <td><a href="https://dist.apache.org/repos/dist/release/incubator/auron/auron-7.0.0-incubating/apache-auron-7.0.0-incubating-source.tgz" target="_blank">download</a> </td>
   </tr>
    <tr>
     <td>6.0.0-incubating</td>
     <td>Oct 17 2025</td>
-    <td><a href="https://github.com/apache/auron/releases/tag/v6.0.0" target="_blank">download</a> </td>
+    <td><a href="https://dist.apache.org/repos/dist/release/incubator/auron/auron-6.0.0-incubating/apache-auron-6.0.0-incubating-source.tgz" target="_blank">download</a> </td>
   </tr>
    <tr>
     <td>5.0.0</td>
