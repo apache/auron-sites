@@ -11,7 +11,7 @@ title: All Archived Releases
   </tr>
    <tr>
     <td>7.0.0-incubating</td>
-    <td>Feb 24 2026</td>
+    <td>Mar 4 2026</td>
     <td><a href="https://dist.apache.org/repos/dist/release/incubator/auron/auron-7.0.0-incubating/apache-auron-7.0.0-incubating-source.tgz" target="_blank">download</a> </td>
   </tr>
    <tr>
