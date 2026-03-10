@@ -6,6 +6,21 @@
         <img src="/img/apache-incubator.svg" alt="Apache Incubator logo" width="200" />
       </a>
     </div>
+    <div class="footer-links">
+      <a href="https://www.apache.org/licenses/" target="_blank" rel="noopener noreferrer">License</a>
+      <span class="footer-separator">•</span>
+      <a href="https://www.apache.org/security/" target="_blank" rel="noopener noreferrer">Security</a>
+      <span class="footer-separator">•</span>
+      <a href="https://privacy.apache.org/policies/privacy-policy-public.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+      <span class="footer-separator">•</span>
+      <a href="https://www.apache.org/foundation/thanks.html" target="_blank" rel="noopener noreferrer">Thanks</a>
+      <span class="footer-separator">•</span>
+      <a href="https://www.apache.org/foundation/sponsorship.html" target="_blank" rel="noopener noreferrer">Sponsorship</a>
+      <span class="footer-separator">•</span>
+      <a href="https://events.apache.org/" target="_blank" rel="noopener noreferrer">Events</a>
+      <span class="footer-separator">•</span>
+      <a href="https://www.apache.org/foundation/" target="_blank" rel="noopener noreferrer">Foundation</a>
+    </div>
     <div class="footer-copyright">
       <br>
       <p>Apache Auron is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</p>
@@ -66,6 +81,36 @@ hr {
   display: inline-block;
   transition: transform 0.3s ease, opacity 0.3s ease;
   margin-bottom: 2rem;
+}
+
+/* Footer links section */
+.footer-links {
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-links a {
+  color: #6b9fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.footer-separator {
+  color: #718096;
+  font-size: 0.9rem;
 }
 
 .footer-incubator-img a:hover {
@@ -136,6 +181,15 @@ hr {
     max-width: 160px;
   }
 
+  .footer-links {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
   .footer-copyright p {
     font-size: 0.75rem;
     padding: 0 0.5rem;
@@ -171,6 +225,20 @@ hr {
     max-width: 140px;
   }
 
+  .footer-links {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-separator {
+    display: none;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+
   .footer-copyright {
     max-width: 100%;
   }
@@ -203,6 +271,10 @@ hr {
 
   .footer-incubator-img img {
     max-width: 120px;
+  }
+
+  .footer-links a {
+    font-size: 0.75rem;
   }
 
   .footer-copyright p {

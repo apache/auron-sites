@@ -45,7 +45,18 @@ const navbar: NavbarOptions = [
     { text: 'v4.0.0', link: '/archives/v4.0.0' },
     { text: 'All Archived Releases', link: '/archives/all-releases' },
   ]},
-  { text: 'ASF', link: 'https://www.apache.org/', target: '_blank', rel: 'noopener noreferrer' }, // Added link to Apache Software Foundation
+  {
+    text: 'ASF',
+    children: [
+      { text: 'License', link: 'https://www.apache.org/licenses/', target: '_blank', rel: 'noopener noreferrer' },
+      { text: 'Security', link: 'https://www.apache.org/security/', target: '_blank', rel: 'noopener noreferrer' },
+      { text: 'Privacy', link: 'https://privacy.apache.org/policies/privacy-policy-public.html', target: '_blank', rel: 'noopener noreferrer' },
+      { text: 'Thanks', link: 'https://www.apache.org/foundation/thanks.html', target: '_blank', rel: 'noopener noreferrer' },
+      { text: 'Sponsorship', link: 'https://www.apache.org/foundation/sponsorship.html', target: '_blank', rel: 'noopener noreferrer' },
+      { text: 'Events', link: 'https://events.apache.org/', target: '_blank', rel: 'noopener noreferrer' },
+      { text: 'Foundation', link: 'https://www.apache.org/', target: '_blank', rel: 'noopener noreferrer' },
+    ],
+  },
 ];
 
 export default defineUserConfig({
