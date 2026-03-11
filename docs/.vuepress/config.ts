@@ -61,6 +61,9 @@ const navbar: NavbarOptions = [
 
 export default defineUserConfig({
   base: '/',
+  head: [
+    ['link', { rel: 'icon', href: '/logo-mini.png' }]
+  ],
   theme: defaultTheme({
     logo: '/auron.svg',
     home: '/',
