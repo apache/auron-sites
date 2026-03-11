@@ -62,7 +62,7 @@ const navbar: NavbarOptions = [
 export default defineUserConfig({
   base: '/',
   theme: defaultTheme({
-    logo: '/auron-incubating-banner.png',
+    logo: '/auron.svg',
     home: '/',
     colorMode: 'light',
     colorModeSwitch: false,
