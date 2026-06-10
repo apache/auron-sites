@@ -3,8 +3,10 @@
     <div class="banner-title-container">
       <div class="banner-title">Run Spark SQL/DataFrame Faster</div>
       <div class="banner-subtitle">The Auron accelerator for big data engine (e.g., Spark, Flink) leverages native vectorized execution to accelerate query processing.</div>
-      <div class="github-buttons-container"><GitHubBadge /></div>
       <a class="route-link auto-link vp-hero-action-button primary" href="/documents/getting-started" aria-label="Get Started">Get Started</a>
+      <a class="route-link auto-link vp-hero-action-button github-button" href="https://github.com/apache/auron" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
     </div>
     <div class="right-logo-container">
       <div class="right-logo">
@@ -88,4 +90,17 @@
 </script>
 
 <style scoped>
+/* GitHub button styles - match Get Started button exactly */
+.github-button {
+  border: 1px solid var(--vp-c-text-1);
+  color: var(--vp-c-text-1);
+  margin-left: 12px;
+}
+
+.github-button:hover {
+  /* Auron brand orange from logo */
+  background-color: #fc4c04;
+  border-color: #fc4c04;
+  color: #fff;
+}
 </style>
