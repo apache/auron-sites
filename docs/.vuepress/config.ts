@@ -87,7 +87,7 @@ export default defineUserConfig({
   ],
   title: 'Apache Auron (Incubating)',
   theme: defaultTheme({
-    logo: '/auron.svg',
+    logo: '/logo-mini.png',
     home: '/',
     colorMode: 'light',
     colorModeSwitch: false,
