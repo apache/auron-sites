@@ -1,8 +1,8 @@
 <template>
   <div class="home-banner">
     <div class="banner-title-container">
-      <div class="banner-title">Run Spark SQL/DataFrame Faster</div>
-      <div class="banner-subtitle">The Auron accelerator for big data engine (e.g., Spark, Flink) leverages native vectorized execution to accelerate query processing.</div>
+      <div class="banner-title">Apache Auron (Incubating)</div>
+      <div class="banner-subtitle">The accelerator for big data engines (e.g., Apache Spark, Apache Flink) leveraging native vectorized execution to accelerate query processing.</div>
       <div class="github-buttons-container"><GitHubBadge /></div>
       <a class="route-link auto-link vp-hero-action-button primary" href="/documents/getting-started" aria-label="Get Started">Get Started</a>
     </div>
@@ -44,7 +44,7 @@
           Easy to Use
         </div>
         <ul class="feature-details">
-          <li>Simple to build and install to Spark.</li>
+          <li>Simple to build and install to Apache Spark.</li>
           <li>Easy to configuration.</li>
           <li>Full-featured execution metrics.</li>
         </ul>
@@ -55,7 +55,7 @@
           Compatibility
         </div>
         <ul class="feature-details">
-          <li>Adapted to Spark mainline versions.</li>
+          <li>Adapted to Apache Spark mainline versions.</li>
           <li>Supports different storage systems like HDFS, S3, etc.</li>
         </ul>
       </div>
@@ -65,7 +65,7 @@
           Ecosystem
         </div>
         <ul class="feature-details">
-          <li>Supports data lake system like Hudi, Paimon.</li>
+          <li>Supports data lake systems like Apache Hudi, Apache Paimon.</li>
           <li>Supports Remote Shuffle Service like Apache Celeborn.</li>
         </ul>
       </div>
@@ -75,8 +75,8 @@
           Community
         </div>
         <ul class="feature-details">
-          <li>Some cooperators have applied Auron on production.</li>
-          <li>More are researching and evaluating Auron.</li>
+          <li>Some cooperators have applied Apache Auron (Incubating) on production.</li>
+          <li>More are researching and evaluating Apache Auron (Incubating).</li>
         </ul>
       </div>
     </div>

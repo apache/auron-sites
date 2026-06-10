@@ -111,7 +111,7 @@ const updateChartOption = () => {
     },
     series: [
       {
-        name: 'Spark-3.5.1',
+        name: 'Apache Spark-3.5.1',
         type: 'bar',
         barWidth: config.barWidth,
         data: sparkResultValues,
@@ -119,7 +119,7 @@ const updateChartOption = () => {
           data: [{ type: 'average', name: 'Average' }],
         },
       }, {
-        name: 'Auron-6.0.0-preview',
+        name: 'Apache Auron (Incubating)-6.0.0-preview',
         type: 'bar',
         barWidth: config.barWidth,
         data: blazeResultValues,

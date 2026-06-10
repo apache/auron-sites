@@ -2,7 +2,7 @@
 title: Configurations
 ---
 
-# Configurations for Auron
+# Configurations for Apache Auron (Incubating)
 
 ### Runtime Configuration
 | Conf Key | Type | Default Value | Description |

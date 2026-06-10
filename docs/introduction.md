@@ -3,7 +3,7 @@ title: Introduction
 ---
 
 ## Overview
-The [Auron](https://github.com/apache/auron) accelerator for Apache Spark leverages native vectorized execution to accelerate query processing. It combines the power of the Apache Arrow-DataFusion library and the scale of the Spark distributed computing framework.
+The [Apache Auron (Incubating)](https://github.com/apache/auron) accelerator for Apache Spark leverages native vectorized execution to accelerate query processing. It combines the power of the Apache Arrow-DataFusion library and the scale of the Spark distributed computing framework.
 
 
 ## Introduction
@@ -11,24 +11,24 @@ The [Auron](https://github.com/apache/auron) accelerator for Apache Spark levera
 ### Problem Statement
 Apache Spark is a popular distributed computing framework for handling large-scale data processing tasks. However, as the data size increases, traditional row-based processing can lead to significant CPU latencies and become a performance bottleneck. To overcome this challenge, vectorized execution technology has been introduced as an optimization method for Spark. 
 
-### Auron’s Solution
-Vectorized execution technology operates by processing data in batches rather than rows, reducing function calls and improving computation performance with SIMD instructions. Auron leverages this technology by integrating the Apache Arrow-DataFusion library with the Spark framework.
+### Apache Auron (Incubating)’s Solution
+Vectorized execution technology operates by processing data in batches rather than rows, reducing function calls and improving computation performance with SIMD instructions. Apache Auron (Incubating) leverages this technology by integrating the Apache Arrow-DataFusion library with the Spark framework.
 
-Auron checks and translates supported operators in the Spark's physical plan and generates an equivalent native execution plan, then it passes the generated execution plan to the underlying native engine through JNI calls. The native engine executes the plan with DataFusion framework, which benefits from vectorized execution and has better performance comparing to Spark's JVM based execution.
+Apache Auron (Incubating) checks and translates supported operators in the Spark’s physical plan and generates an equivalent native execution plan, then it passes the generated execution plan to the underlying native engine through JNI calls. The native engine executes the plan with DataFusion framework, which benefits from vectorized execution and has better performance comparing to Spark’s JVM based execution.
 
 ### Target User
-Auron's target users are those who want to accelerate Spark SQL/DataFrame queries. Users can install Auron as a Spark client extension. After installing, most SQL queries should run faster without modifying, and save cluster resources.
+Apache Auron (Incubating)’s target users are those who want to accelerate Spark SQL/DataFrame queries. Users can install Apache Auron (Incubating) as a Spark client extension. After installing, most SQL queries should run faster without modifying, and save cluster resources.
 
 ## Architecture
-The architecture design of Auron is as follows.
-Auron takes a fully optimized physical plan from Spark, mapping it into equivalent execution plan implemented in native engine, and executes in Spark distributed environment.
+The architecture design of Apache Auron (Incubating) is as follows.
+Apache Auron (Incubating) takes a fully optimized physical plan from Spark, mapping it into equivalent execution plan implemented in native engine, and executes in Spark distributed environment.
 
-![Spark+Auron architecture](./img/auron_architecture.webp)
+![Apache Spark + Apache Auron (Incubating) architecture](./img/auron_architecture.webp)
 
-Auron is composed of the following high-level components:
+Apache Auron (Incubating) is composed of the following high-level components:
 
 - **Spark Extension**: hooks the whole accelerator into Spark execution lifetime.
-- **Spark Shims**: specialized codes for different versions of spark.
+- **Spark Shims**: specialized codes for different versions of Spark.
 - **Native Engine**: implements the native engine in rust, including:
   - ExecutionPlan protobuf specification.
   - JNI gateway.
@@ -37,13 +37,13 @@ Auron is composed of the following high-level components:
 
 The architecture diagram of the **native engine** is as follows:
 
-![Auron Native Engine](./img/auron_native_engine.webp)
+![Apache Auron (Incubating) Native Engine](./img/auron_native_engine.webp)
 
 ### Currently Supported Native Operators/Expressions
 
-All supported operators in Auron are listed below. Auron does support fallbacking an operator to spark execution which has not been implemented, so SQLs containing unsupported operators can still be executed successfully. However, fallbacks takes extra costs, too many fallbacks will slow down the execution.
+All supported operators in Apache Auron (Incubating) are listed below. Apache Auron (Incubating) does support fallbacking an operator to Spark execution which has not been implemented, so SQLs containing unsupported operators can still be executed successfully. However, fallbacks takes extra costs, too many fallbacks will slow down the execution.
 
-Most spark builtin expressions are supported in Auron (by translating to DataFusion-physical-exprs). Auron also supports expression-level fallbacking, which can fallback a single unsupported expression to spark execution. so SQLs containing some unsupported expressions like UDF/UDTFs can still be optimized.
+Most Spark builtin expressions are supported in Apache Auron (Incubating) (by translating to DataFusion-physical-exprs). Apache Auron (Incubating) also supports expression-level fallbacking, which can fallback a single unsupported expression to Spark execution. so SQLs containing some unsupported expressions like UDF/UDTFs can still be optimized.
 
 <table class="my-table3">
   <tbody>
@@ -140,11 +140,11 @@ Most spark builtin expressions are supported in Auron (by translating to DataFus
 ## Join the Community
 
 ### Source Code
-Please see [Auron source code](https://github.com/apache/auron) for more information.
+Please see [Apache Auron (Incubating) source code](https://github.com/apache/auron) for more information.
 
 ### Cooperators
 
-Auron currently has some users and contributors:
+Apache Auron (Incubating) currently has some users and contributors:
 
 <div class="partners-container">
   <div class="partners">
