@@ -6,11 +6,11 @@ title: Benchmarks
 
 ## Benchmark Result
 
-Here is the benchmark result of TPC-DS 1TB Dataset, running under Spark-3.5.6 and Auron-6.0.0-preview (dc8d7a9).
+Here is the benchmark result of TPC-DS 1TB Dataset, running under Apache Spark-3.5.6 and Apache Auron (Incubating)-6.0.0-preview (dc8d7a9).
 
 <BenchmarkChart />
 
-Below is a brief introduction of how we run TPC-DS benchmark with Spark/Auron.
+Below is a brief introduction of how we run TPC-DS benchmark with Apache Spark/Apache Auron (Incubating).
 
 ## Get TPC-DS tools
 ```
@@ -47,8 +47,8 @@ cd tpcds/benchmark-runner
 mvn package -DskipTests
 ```
 
-Edit your `$SPARK_HOME/conf/spark-default.conf` to enable/disable Auron (see the following conf), then launch benchmark runner.
-If benchmarking with Auron, ensure that the Auron jar package is correctly built and moved into `$SPARK_HOME/jars`. ([How to build Auron?](https://github.com/apache/auron/#build-from-source))
+Edit your `$SPARK_HOME/conf/spark-default.conf` to enable/disable Apache Auron (Incubating) (see the following conf), then launch benchmark runner.
+If benchmarking with Apache Auron (Incubating), ensure that the Apache Auron (Incubating) jar package is correctly built and moved into `$SPARK_HOME/jars`. ([How to build Apache Auron (Incubating)?](https://github.com/apache/auron/#build-from-source))
 ```bash
 # use correct SPARK_HOME and data location
 SPARK_HOME=$HOME/software/spark ./bin/run \
