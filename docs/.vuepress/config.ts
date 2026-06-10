@@ -6,7 +6,28 @@ import { path } from '@vuepress/utils'
 import { SidebarOptions } from '@vuepress/theme-default'
 
 const sidebar: SidebarOptions = [
-  { text: 'Introduction', link: '/introduction' },
+  {
+    text: 'Introduction',
+    link: '/introduction',
+    children: [
+      {
+        text: 'Overview',
+        link: '/introduction#overview',
+      },
+      {
+        text: 'Introduction',
+        link: '/introduction#introduction',
+      },
+      {
+        text: 'Architecture',
+        link: '/introduction#architecture',
+      },
+      {
+        text: 'Join the Community',
+        link: '/introduction#join-the-community',
+      },
+    ]
+  },
   {
     text: 'Documents',
     prefix: 'documents',
