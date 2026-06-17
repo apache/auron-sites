@@ -25,6 +25,7 @@
       <br>
 <p>Apache Auron (Incubating) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</p>
       <p>Copyright © 2025-2026 The Apache Software Foundation, Licensed under the Apache License, Version 2.0.</p>
+      <p>Apache Auron, the Apache Auron logo are trademarks of The Apache Software Foundation.</p>
       <p>Apache, the names of Apache projects, and the feather logo are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</p>
     </div>
   </div>
@@ -162,7 +163,8 @@ hr {
 
 /* Copyright and trademark paragraphs */
 .footer-copyright p:nth-child(2),
-.footer-copyright p:nth-child(3) {
+.footer-copyright p:nth-child(3),
+.footer-copyright p:nth-child(4) {
   font-size: 0.75rem;
   margin-bottom: 0.8rem;
 }
@@ -202,7 +204,8 @@ hr {
   }
 
   .footer-copyright p:nth-child(2),
-  .footer-copyright p:nth-child(3) {
+  .footer-copyright p:nth-child(3),
+  .footer-copyright p:nth-child(4) {
     font-size: 0.7rem;
   }
 }
@@ -257,7 +260,8 @@ hr {
   }
 
   .footer-copyright p:nth-child(2),
-  .footer-copyright p:nth-child(3) {
+  .footer-copyright p:nth-child(3),
+  .footer-copyright p:nth-child(4) {
     font-size: 0.65rem;
     margin-bottom: 0.8rem;
   }
@@ -289,7 +293,8 @@ hr {
   }
 
   .footer-copyright p:nth-child(2),
-  .footer-copyright p:nth-child(3) {
+  .footer-copyright p:nth-child(3),
+  .footer-copyright p:nth-child(4) {
     font-size: 0.6rem;
   }
 }
@@ -311,7 +316,8 @@ hr {
   }
 
   .footer-copyright p:nth-child(2),
-  .footer-copyright p:nth-child(3) {}
+  .footer-copyright p:nth-child(3),
+  .footer-copyright p:nth-child(4) {}
 
   hr {
     background: linear-gradient(90deg, transparent, #4a5568, transparent) !important;

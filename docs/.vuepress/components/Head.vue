@@ -1,7 +1,7 @@
 <template>
   <div class="home-banner">
     <div class="banner-title-container">
-      <div class="banner-title">Apache Auron (Incubating)</div>
+      <div class="banner-title">Apache Auron™ (Incubating)</div>
       <div class="banner-subtitle">The accelerator for big data engines (e.g., Apache Spark, Apache Flink) leveraging native vectorized execution to accelerate query processing.</div>
       <div class="github-buttons-container"><GitHubBadge /></div>
       <a class="route-link auto-link vp-hero-action-button primary" href="/documents/getting-started" aria-label="Get Started">Get Started</a>
