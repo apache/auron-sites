@@ -11,6 +11,13 @@ title: All Archived Releases
     <th>Checksum</th>
     <th>Signature</th>
   </tr>
+  <tr>
+    <td>8.0.0-incubating</td>
+    <td>Jul 18 2026</td>
+    <td><a href="https://www.apache.org/dyn/closer.lua/incubator/auron/auron-8.0.0-incubating/apache-auron-8.0.0-incubating-source.tgz?action=download" target="_blank">download</a> </td>
+    <td><a href="https://downloads.apache.org/incubator/auron/auron-8.0.0-incubating/apache-auron-8.0.0-incubating-source.tgz.sha512" target="_blank">sha512</a> </td>
+    <td><a href="https://downloads.apache.org/incubator/auron/auron-8.0.0-incubating/apache-auron-8.0.0-incubating-source.tgz.asc" target="_blank">asc</a> </td>
+  </tr>
    <tr>
     <td>7.0.0-incubating</td>
     <td>Mar 4 2026</td>
