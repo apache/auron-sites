@@ -41,6 +41,7 @@ const sidebar: SidebarOptions = [
     text: 'Archives',
     prefix: 'archives',
     children: [
+      '/archives/v8.0.0-incubating',
       '/archives/v7.0.0-incubating',
       '/archives/v6.0.0-incubating',
       '/archives/v5.0.0',
@@ -59,6 +60,7 @@ const navbar: NavbarOptions = [
     { text: 'Benchmarks', link: '/documents/benchmarks' },
   ]},
   { text: 'Archives', children: [
+    { text: 'v8.0.0-incubating', link: '/archives/v8.0.0-incubating' },
     { text: 'v7.0.0-incubating', link: '/archives/v7.0.0-incubating' },
     { text: 'v6.0.0-incubating', link: '/archives/v6.0.0-incubating' },
     { text: 'v5.0.0', link: '/archives/v5.0.0' },
