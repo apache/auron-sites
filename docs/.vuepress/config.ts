@@ -38,6 +38,13 @@ const sidebar: SidebarOptions = [
     ]
   },
   {
+    text: 'Community',
+    prefix: 'community',
+    children: [
+      '/community/release-guide',
+    ]
+  },
+  {
     text: 'Archives',
     prefix: 'archives',
     children: [
@@ -58,6 +65,9 @@ const navbar: NavbarOptions = [
     { text: 'Getting Started', link: '/documents/getting-started' },
     { text: 'Configuration', link: '/documents/configuration' },
     { text: 'Benchmarks', link: '/documents/benchmarks' },
+  ]},
+  { text: 'Community', children: [
+    { text: 'Release Guide', link: '/community/release-guide' },
   ]},
   { text: 'Archives', children: [
     { text: 'v8.0.0-incubating', link: '/archives/v8.0.0-incubating' },
