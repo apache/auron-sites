@@ -46,15 +46,20 @@ const sidebar: SidebarOptions = [
   },
   {
     text: 'Archives',
-    prefix: 'archives',
     children: [
-      '/archives/v8.0.0-incubating',
-      '/archives/v7.0.0-incubating',
-      '/archives/v6.0.0-incubating',
-      '/archives/v5.0.0',
-      '/archives/v4.0.1',
-      '/archives/v4.0.0',
-      '/archives/all-releases',
+      { text: 'v8.0.0-incubating', link: '/archives/v8.0.0-incubating' },
+      { text: 'v7.0.0-incubating', link: '/archives/v7.0.0-incubating' },
+      { text: 'v6.0.0-incubating', link: '/archives/v6.0.0-incubating' },
+      {
+        text: 'Pre-ASF Releases',
+        collapsible: true,
+        children: [
+          { text: 'v5.0.0', link: '/archives/v5.0.0' },
+          { text: 'v4.0.1', link: '/archives/v4.0.1' },
+          { text: 'v4.0.0', link: '/archives/v4.0.0' },
+        ],
+      },
+      { text: 'All Archived Releases', link: '/archives/all-releases' },
     ]
   },
 ];
@@ -73,9 +78,11 @@ const navbar: NavbarOptions = [
     { text: 'v8.0.0-incubating', link: '/archives/v8.0.0-incubating' },
     { text: 'v7.0.0-incubating', link: '/archives/v7.0.0-incubating' },
     { text: 'v6.0.0-incubating', link: '/archives/v6.0.0-incubating' },
-    { text: 'v5.0.0', link: '/archives/v5.0.0' },
-    { text: 'v4.0.1', link: '/archives/v4.0.1' },
-    { text: 'v4.0.0', link: '/archives/v4.0.0' },
+    { text: 'Pre-ASF Releases', children: [
+      { text: 'v5.0.0', link: '/archives/v5.0.0' },
+      { text: 'v4.0.1', link: '/archives/v4.0.1' },
+      { text: 'v4.0.0', link: '/archives/v4.0.0' },
+    ]},
     { text: 'All Archived Releases', link: '/archives/all-releases' },
   ]},
   {
