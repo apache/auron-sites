@@ -47,16 +47,12 @@ const sidebar: SidebarOptions = [
   {
     text: 'Archives',
     children: [
-      {
-        text: 'ASF Incubating Releases',
-        children: [
-          { text: 'v8.0.0-incubating', link: '/archives/v8.0.0-incubating' },
-          { text: 'v7.0.0-incubating', link: '/archives/v7.0.0-incubating' },
-          { text: 'v6.0.0-incubating', link: '/archives/v6.0.0-incubating' },
-        ],
-      },
+      { text: 'v8.0.0-incubating', link: '/archives/v8.0.0-incubating' },
+      { text: 'v7.0.0-incubating', link: '/archives/v7.0.0-incubating' },
+      { text: 'v6.0.0-incubating', link: '/archives/v6.0.0-incubating' },
       {
         text: 'Pre-ASF Releases',
+        collapsible: true,
         children: [
           { text: 'v5.0.0', link: '/archives/v5.0.0' },
           { text: 'v4.0.1', link: '/archives/v4.0.1' },
@@ -79,11 +75,9 @@ const navbar: NavbarOptions = [
     { text: 'Release Guide', link: '/community/release-guide' },
   ]},
   { text: 'Archives', children: [
-    { text: 'ASF Incubating Releases', children: [
-      { text: 'v8.0.0-incubating', link: '/archives/v8.0.0-incubating' },
-      { text: 'v7.0.0-incubating', link: '/archives/v7.0.0-incubating' },
-      { text: 'v6.0.0-incubating', link: '/archives/v6.0.0-incubating' },
-    ]},
+    { text: 'v8.0.0-incubating', link: '/archives/v8.0.0-incubating' },
+    { text: 'v7.0.0-incubating', link: '/archives/v7.0.0-incubating' },
+    { text: 'v6.0.0-incubating', link: '/archives/v6.0.0-incubating' },
     { text: 'Pre-ASF Releases', children: [
       { text: 'v5.0.0', link: '/archives/v5.0.0' },
       { text: 'v4.0.1', link: '/archives/v4.0.1' },
