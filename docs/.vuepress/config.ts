@@ -41,6 +41,8 @@ const sidebar: SidebarOptions = [
     text: 'Community',
     prefix: 'community',
     children: [
+      '/community/committer',
+      '/community/ppmc',
       '/community/release-guide',
     ]
   },
@@ -72,6 +74,8 @@ const navbar: NavbarOptions = [
     { text: 'Benchmarks', link: '/documents/benchmarks' },
   ]},
   { text: 'Community', children: [
+    { text: 'Become a Committer', link: '/community/committer' },
+    { text: 'Become a PPMC Member', link: '/community/ppmc' },
     { text: 'Release Guide', link: '/community/release-guide' },
   ]},
   { text: 'Archives', children: [
