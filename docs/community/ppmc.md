@@ -10,18 +10,19 @@ project Mentors and the Incubator PMC (IPMC).
 
 ## Current PPMC members
 
-| Name | Apache ID |
+| Name | Apache ID | Inc |
 | --- | --- |
-| Shaoyun Chen | `csy` |
-| Hao Li | `lihao` |
-| Yuance Li | `liyuance` |
-| Ruilei Ma | `maruilei` |
-| Jiashu Xiong | `rexxiong` |
-| Li Zhang | `richox` |
-| Lei Wang | `wanglei` |
-| Zhen Wang | `wangzhen` |
-| Yijie Shen | `yjshen` |
-| Junfan Zhang | `zuston` |
+| Shaoyun Chen | `csy` | Trip.com Group Limited |
+| Hao Li | `lihao` | Kuaishou Technology |
+| Yuance Li | `liyuance` | Kuaishou Technology |
+| Ruilei Ma | `maruilei` | 58.Com.Inc |
+| Jiashu Xiong | `rexxiong` | ALIBABA CLOUD COMPUTING LIMITED |
+| Li Zhang | `richox` | Kuaishou Technology |
+| Lei Wang | `wanglei` | Kuaishou Technology |
+| Zhen Wang | `wangzhen` | iQIYI |
+| Yijie Shen | `yjshen` | DataPelago |
+| Junfan Zhang | `zuston` | iQIYI |
+| Shilun Fan | `slfan1989` | Didi Global Inc |
 
 ## Mentors
 
