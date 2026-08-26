@@ -11,7 +11,7 @@ project Mentors and the Incubator PMC (IPMC).
 ## Current PPMC members
 
 | Name | Apache ID | Inc |
-| --- | --- |
+| --- | --- | --- |
 | Shaoyun Chen | `csy` | Trip.com Group Limited |
 | Hao Li | `lihao` | Kuaishou Technology |
 | Yuance Li | `liyuance` | Kuaishou Technology |
