@@ -16,7 +16,7 @@
     "@vuepress/plugin-register-components": "2.0.0-rc.54",
     "@vuepress/theme-default": "2.0.0-rc.56",
     "echarts": "^5.5.1",
-    "sass-embedded": "^1.81.1",
+    "sass-embedded": "1.81.1",
     "vue": "^3.4.0",
     "vue-echarts": "^7.0.3",
     "vue-github-button": "^3.1.3",
