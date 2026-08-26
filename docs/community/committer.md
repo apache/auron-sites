@@ -6,28 +6,26 @@ title: Become a Committer
 
 ## Current committers
 
-| Name | Apache ID |
-| --- | --- |
-| Shaoyun Chen | `csy` |
-| Fei Wang | `feiwang` |
-| Gui Huawen | `guihuawen` |
-| Becket Qin | `jqin` |
-| Calvin Kirs | `kirs` |
-| Hao Li | `lihao` |
-| Yuance Li | `liyuance` |
-| Ruilei Ma | `maruilei` |
-| Nicholas Jiang | `nicholasjiang` |
-| Jiashu Xiong | `rexxiong` |
-| Li Zhang | `richox` |
-| Shreyesh Arangath | `shreyesh` |
-| Shilun Fan | `slfan1989` |
-| Lei Wang | `wanglei` |
-| Zhen Wang | `wangzhen` |
-| Hao Ding | `xuanwo` |
-| Hai Zhou | `yew1eb` |
-| Yijie Shen | `yjshen` |
-| Mang Zhang | `zhangmang` |
-| Junfan Zhang | `zuston` |
+| Name | Apache ID | Inc |
+| --- | --- | --- |
+| Shaoyun Chen | `csy` | Trip.com Group Limited |
+| Fei Wang | `feiwang` | eBay Inc. |
+| Gui Huawen | `guihuawen` | Didi Global Inc |
+| Hao Li | `lihao` | Kuaishou Technology |
+| Yuance Li | `liyuance` | Kuaishou Technology |
+| Ruilei Ma | `maruilei` | 58.Com Inc |
+| Ming Wei | `mingwei` | Didi Global Inc |
+| Jiashu Xiong | `rexxiong` | ALIBABA CLOUD COMPUTING LIMITED |
+| Li Zhang | `richox` | Kuaishou Technology |
+| Shreyesh Arangath | `shreyesh` | LinkedIn Co |
+| Shilun Fan | `slfan1989` | Didi Global Inc |
+| Lei Wang | `wanglei` | Kuaishou Technology |
+| Zhen Wang | `wangzhen` | iQIYI, Inc |
+| Weiqing Yang | `weiqing` | LinkedIn Co |
+| Hai Zhou | `yew1eb` | Dewu Information Group Co |
+| Yijie Shen | `yjshen` | DataPelago |
+| Mang Zhang | `zhangmang` | Kuaishou Technology |
+| Junfan Zhang | `zuston` | iQIYI, Inc. |
 
 The list above is maintained from the
 [ASF committer roster](https://people.apache.org/committers-by-project.html#auron).
