@@ -146,8 +146,7 @@ hr {
   line-height: 1.6;
   margin: 0 0 1.2rem 0;
   padding: 0 1rem;
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: center;
 }
 
 /* First paragraph (incubation notice) styling */
@@ -195,7 +194,7 @@ hr {
   .footer-copyright p {
     font-size: 0.75rem;
     padding: 0 0.5rem;
-    text-align: left;
+    text-align: center;
   }
 
   .footer-copyright p:first-child {
