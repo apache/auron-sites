@@ -108,7 +108,7 @@ export default defineUserConfig({
   head: [
     ['link', { rel: 'icon', href: '/logo-mini.png' }]
   ],
-  title: 'Apache Auron™ (Incubating)',
+  title: 'Apache Auron™',
   theme: defaultTheme({
     logo: '/logo-mini.png',
     home: '/',

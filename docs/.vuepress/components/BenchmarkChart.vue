@@ -119,7 +119,7 @@ const updateChartOption = () => {
           data: [{ type: 'average', name: 'Average' }],
         },
       }, {
-        name: 'Apache Auron (Incubating)-6.0.0-preview',
+        name: 'Apache Auron-6.0.0-preview',
         type: 'bar',
         barWidth: config.barWidth,
         data: blazeResultValues,
