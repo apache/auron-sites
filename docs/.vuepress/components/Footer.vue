@@ -1,11 +1,6 @@
 <template>
   <hr/>
   <div class="footer-container">
-    <div class="footer-incubator-img">
-      <a href="https://incubator.apache.org/" rel="noopener noreferrer">
-        <img src="/img/apache-incubator.svg" alt="Apache Incubator logo" width="200" />
-      </a>
-    </div>
     <div class="footer-links">
       <a href="https://www.apache.org/licenses/" target="_blank" rel="noopener noreferrer">License</a>
       <span class="footer-separator">•</span>
@@ -23,7 +18,7 @@
     </div>
     <div class="footer-copyright">
       <br>
-<p>Apache Auron (Incubating) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</p>
+<p>Apache Auron is a top-level project of The Apache Software Foundation (ASF).</p>
       <p>Copyright © 2025-2026 The Apache Software Foundation, Licensed under the Apache License, Version 2.0.</p>
       <p>Apache Auron and the Apache Auron logo are trademarks of The Apache Software Foundation.</p>
       <p>Apache, the names of Apache projects, and the feather logo are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</p>
@@ -66,25 +61,6 @@ hr {
 }
 
 /* Footer content wrapper */
-.footer-incubator-img {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-/* Apache Incubator logo styling */
-.footer-incubator-img a {
-  display: inline-block;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  margin-bottom: 2rem;
-}
-
-/* Footer links section */
 .footer-links {
   max-width: 1200px;
   margin: 0 auto 2rem auto;
@@ -112,22 +88,6 @@ hr {
 .footer-separator {
   color: #718096;
   font-size: 0.9rem;
-}
-
-.footer-incubator-img a:hover {
-  transform: translateY(-2px);
-  opacity: 0.8;
-}
-
-.footer-incubator-img img {
-  max-width: 180px;
-  height: auto;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3)) brightness(0.8);
-  transition: filter 0.3s ease;
-}
-
-.footer-incubator-img a:hover img {
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4)) brightness(1.2);
 }
 
 /* Copyright section styling */
@@ -179,10 +139,6 @@ hr {
     padding: 2.5rem 1.5rem 1.5rem;
   }
 
-  .footer-incubator-img img {
-    max-width: 160px;
-  }
-
   .footer-links {
     font-size: 0.85rem;
     margin-bottom: 1.5rem;
@@ -218,14 +174,6 @@ hr {
 
   .footer-container {
     padding: 2rem 1rem 1.5rem;
-  }
-
-  .footer-incubator-img {
-    margin-bottom: 1rem;
-  }
-
-  .footer-incubator-img img {
-    max-width: 140px;
   }
 
   .footer-links {
@@ -271,10 +219,6 @@ hr {
 @media (max-width: 360px) {
   .footer-container {
     padding: 1.5rem 0.8rem 1.2rem;
-  }
-
-  .footer-incubator-img img {
-    max-width: 120px;
   }
 
   .footer-links a {

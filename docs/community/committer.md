@@ -30,7 +30,7 @@ title: Become a Committer
 The list above is maintained from the
 [ASF committer roster](https://people.apache.org/committers-by-project.html#auron).
 
-## Become a Committer of Apache Auron™ (Incubating)
+## Become a Committer of Apache Auron™
 
 Anyone who supports the community and contributes in any of the CoPDoC areas can
 become an Apache Auron committer. CoPDoC is an ASF acronym describing the many ways
@@ -76,5 +76,5 @@ large contribution.
 - Participate constructively in pull-request reviews and roadmap discussions.
 - Promote the project through articles, talks, events, or other community work.
 
-For authoritative Incubator guidance, see the
-[Apache Incubator Committer Guide](https://incubator.apache.org/guides/committer.html).
+For additional guidance, see the
+[ASF Committer Guide](https://incubator.apache.org/guides/committer.html).
