@@ -110,7 +110,7 @@ hr {
   text-justify: inter-word;
 }
 
-/* First paragraph (incubation notice) styling */
+/* First paragraph (top-level project notice) styling */
 .footer-copyright p:first-child {
   background: rgba(45, 55, 72, 0.8);
   border-left: 4px solid #6b9fff;

@@ -1,47 +1,51 @@
 ---
-title: Become a PPMC Member
+title: Become a PMC Member
 ---
 
-# Become a PPMC Member
+# Become a PMC Member
 
-Apache Auron is an Apache Incubator podling. During incubation, project oversight is
-provided by the Podling Project Management Committee (PPMC), with guidance from the
-project Mentors and the Incubator PMC (IPMC).
+Apache Auron is a top-level project of The Apache Software Foundation (ASF). Project
+oversight is exercised by the Project Management Committee (PMC), which governs the
+project under the ASF umbrella.
 
-## Current PPMC members
+## Current PMC members
+
+Per the graduation resolution, all committers of Apache Auron automatically became PMC
+members. The four incubator mentors have also remained on the PMC, so the current PMC
+roster is:
 
 | Name | Apache ID | Inc |
 | --- | --- | --- |
 | Shaoyun Chen | `csy` | Trip.com Group Limited |
+| Fei Wang | `feiwang` | eBay Inc. |
+| Gui Huawen | `guihuawen` | Didi Global Inc |
 | Hao Li | `lihao` | Kuaishou Technology |
 | Yuance Li | `liyuance` | Kuaishou Technology |
-| Ruilei Ma | `maruilei` | 58.Com.Inc |
+| Ruilei Ma | `maruilei` | 58.Com Inc |
+| Ming Wei | `mingwei` | Didi Global Inc |
 | Jiashu Xiong | `rexxiong` | ALIBABA CLOUD COMPUTING LIMITED |
 | Li Zhang | `richox` | Kuaishou Technology |
-| Lei Wang | `wanglei` | Kuaishou Technology |
-| Zhen Wang | `wangzhen` | iQIYI |
-| Yijie Shen | `yjshen` | DataPelago |
-| Junfan Zhang | `zuston` | iQIYI |
+| Shreyesh Arangath | `shreyesh` | LinkedIn Co |
 | Shilun Fan | `slfan1989` | Didi Global Inc |
+| Lei Wang | `wanglei` | Kuaishou Technology |
+| Zhen Wang | `wangzhen` | iQIYI, Inc |
+| Weiqing Yang | `weiqing` | LinkedIn Co |
+| Hai Zhou | `yew1eb` | Dewu Information Group Co |
+| Yijie Shen | `yjshen` | DataPelago |
+| Mang Zhang | `zhangmang` | Kuaishou Technology |
+| Junfan Zhang | `zuston` | iQIYI, Inc. |
+| Becket Qin | `jqin` |  |
+| Calvin Kirs | `kirs` |  |
+| Nicholas Jiang | `nicholasjiang` |  |
+| Hao Ding | `xuanwo` |  |
 
-## Mentors
-
-Mentors are IPMC members who guide the podling and are also members of its PPMC roster.
-
-| Name | Apache ID |
-| --- | --- |
-| Becket Qin | `jqin` |
-| Calvin Kirs | `kirs` |
-| Nicholas Jiang | `nicholasjiang` |
-| Hao Ding | `xuanwo` |
-
-The PPMC and Mentor lists above are maintained from the
+The list above is maintained from the
 [ASF public LDAP roster](https://whimsy.apache.org/public/public_ldap_projects.json).
 
-## Become a PPMC member of Apache Auron™ (Incubating)
+## Become a PMC Member of Apache Auron™
 
 Anyone who supports the community and contributes in any of the CoPDoC areas can be
-considered for Apache Auron PPMC membership:
+considered for Apache Auron PMC membership:
 
 - **Community** — participate on the mailing list, issue tracker, and discussions;
   share knowledge and help other community members.
@@ -49,14 +53,12 @@ considered for Apache Auron PPMC membership:
 - **Documentation** — make knowledge accessible and keep project guidance current.
 - **Code** — design, implement, review, test, and maintain project software.
 
-The PPMC watches for committers who continue to grow as community participants and
-take responsibility for the health and governance of the podling. PPMC members are
-selected through the private discussion, vote, invitation, and acceptance process
-defined by the Apache Incubator.
+The PMC watches for committers who continue to grow as community participants and
+take responsibility for the health and governance of the project.
 
-## PPMC member considerations
+## PMC member considerations
 
-There are no strict ASF-wide rules for becoming a PPMC member. Candidates are normally
+There are no strict ASF-wide rules for becoming a PMC member. Candidates are normally
 active committers who continue making sustained contributions after becoming a
 committer, or community members whose significant contributions demonstrate readiness
 for project governance. These considerations are guidance rather than fixed thresholds.
@@ -84,4 +86,4 @@ mentoring contributors, answering community questions, and helping with releases
 - Promote the project through articles, talks, events, or other community work.
 
 For the authoritative membership process and role description, see the
-[Apache Incubator PPMC Guide](https://incubator.apache.org/guides/ppmc.html).
+[ASF Committee Guide](https://www.apache.org/dev/committers.html#committee).
