@@ -6,6 +6,9 @@ title: Become a Committer
 
 ## Current committers
 
+Per the graduation resolution, all Auron committers automatically became PMC members,
+so the committer roster below is also the current PMC roster:
+
 | Name | Apache ID | Inc |
 | --- | --- | --- |
 | Shaoyun Chen | `csy` | Trip.com Group Limited |
@@ -30,7 +33,7 @@ title: Become a Committer
 The list above is maintained from the
 [ASF committer roster](https://people.apache.org/committers-by-project.html#auron).
 
-## Become a Committer of Apache Auron™ (Incubating)
+## Become a Committer of Apache Auron™
 
 Anyone who supports the community and contributes in any of the CoPDoC areas can
 become an Apache Auron committer. CoPDoC is an ASF acronym describing the many ways
@@ -43,7 +46,7 @@ contributions are recognized, not only through code:
 - **Code** — design, implement, review, test, and maintain project software.
 
 Apache Auron strives to be a meritocratic community. After someone has contributed
-consistently in one or more CoPDoC areas, the PPMC may invite that person to become a
+consistently in one or more CoPDoC areas, the PMC may invite that person to become a
 committer. Committership is not limited to writing code: it recognizes a sustained
 commitment to the project and its community.
 
@@ -76,5 +79,5 @@ large contribution.
 - Participate constructively in pull-request reviews and roadmap discussions.
 - Promote the project through articles, talks, events, or other community work.
 
-For authoritative Incubator guidance, see the
-[Apache Incubator Committer Guide](https://incubator.apache.org/guides/committer.html).
+For the authoritative process and role description, see the
+[ASF New Committers Guide](https://www.apache.org/dev/new-committers-guide.html).

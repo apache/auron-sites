@@ -1,7 +1,7 @@
 <template>
   <div class="home-banner">
     <div class="banner-title-container">
-      <div class="banner-title">Apache Auron™ (Incubating)</div>
+      <div class="banner-title">Apache Auron™</div>
       <div class="banner-subtitle">Apache Auron software is an accelerator for big data engines, leveraging native vectorized execution to accelerate query processing.</div>
       <div class="github-buttons-container"><GitHubBadge /></div>
       <a class="route-link auto-link vp-hero-action-button primary" href="/documents/getting-started" aria-label="Get Started">Get Started</a>
@@ -75,8 +75,8 @@
           Community
         </div>
         <ul class="feature-details">
-          <li>Some cooperators have applied Apache Auron (Incubating) on production.</li>
-          <li>More are researching and evaluating Apache Auron (Incubating).</li>
+          <li>Some cooperators have applied Apache Auron on production.</li>
+          <li>More are researching and evaluating Apache Auron.</li>
         </ul>
       </div>
     </div>

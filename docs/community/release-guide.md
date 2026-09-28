@@ -2,15 +2,15 @@
 title: Release Guide
 ---
 
-# Apache Auron (Incubating) Release Guide
+# Apache Auron Release Guide
 
 This runbook describes how a Release Manager (RM) prepares, verifies, votes on, and
-publishes an Apache Auron (Incubating) source release. It covers the Incubator process:
-an Auron community vote on `dev@auron.apache.org`, followed by an Incubator PMC (IPMC)
-vote on `general@incubator.apache.org`.
+publishes an Apache Auron source release. As a top-level Apache project, Auron follows
+the standard ASF release process: an Auron community vote on `dev@auron.apache.org`,
+with PMC members casting the binding votes for ASF release approval.
 
-This guide is operational guidance, not policy. If it conflicts with current ASF or
-Incubator policy, follow the official policy and update this guide.
+This guide is operational guidance, not policy. If it conflicts with current ASF
+policy, follow the official policy and update this guide.
 
 ::: danger Important release boundary
 The source archive, not the Git tag or GitHub release, is the artifact being voted on.
@@ -26,12 +26,11 @@ requires a new RC and a new vote.
 4. Build, sign, and stage the source archive in `dist/dev`.
 5. Independently verify the staged release candidate.
 6. Run the public Auron community vote.
-7. Run the public IPMC vote.
-8. Promote the approved artifact to `dist/release`.
-9. Wait for the official download service, publish the website and GitHub release, and
+7. Promote the approved artifact to `dist/release`.
+8. Wait for the official download service, publish the website and GitHub release, and
    announce the release.
-10. Clean up staging artifacts and move the source repository to the next development
-    version.
+9. Clean up staging artifacts and move the source repository to the next development
+   version.
 
 If an RC is cancelled, fix the issue, increment `RC_NUMBER`, and repeat every affected
 step. Do not reuse a tag or staging directory that has already been voted on.
@@ -39,22 +38,17 @@ step. Do not reuse a tag or staging directory that has already been voted on.
 ## Roles and vote terminology
 
 - **Release Manager:** coordinates the release, creates and signs the source archive,
-  starts votes, records results, and completes the post-release work.
-- **Auron PPMC:** determines whether the Auron community approves submitting the RC to
-  the IPMC.
+  starts the vote, records the result, and completes the post-release work.
+- **Auron PMC:** provides the binding ASF release approval. PMC member votes are binding;
+  committer and contributor votes are valuable but non-binding.
 - **Auron committers and contributors:** review and vote in the community; their input is
   encouraged even when it is not binding for ASF release approval.
-- **Incubator PMC:** provides the binding ASF release approval required while Auron is
-  incubating.
 
-The first vote is a public **Auron community approval vote** on
-`dev@auron.apache.org`; it is not a private-list vote. For that community decision,
-Auron records PPMC approval votes separately from other community votes. Under ASF
-Incubator policy, however, only IPMC members cast binding release votes. Binding status
-does not depend on which mailing list carries the vote.
-
-The IPMC release vote passes when it has at least three binding `+1` votes and more
-binding `+1` votes than binding `-1` votes. A release vote cannot be vetoed by a single
+The release vote is a public **Auron community vote** on `dev@auron.apache.org`; it is
+not a private-list vote. For that community decision, Auron records PMC binding votes
+separately from other community votes. The release vote passes when at least three PMC
+members cast binding `+1` votes, binding `+1` votes outnumber binding `-1` votes, and the
+vote has stayed open for the required period. A release vote cannot be vetoed by a single
 `-1`, but every concern must be investigated and resolved transparently.
 
 ## 1. Prerequisites
@@ -69,8 +63,8 @@ The RM needs:
 - access to an ASF account permitted to promote the release into `dist/release`.
 
 By default, committers can write to `dist/dev`, while `dist/release` is restricted to
-PMC/PPMC members. If the RM cannot finalize the release, arrange for an authorized PPMC
-member or mentor to run the finalize step after both votes pass.
+PMC members. If the RM cannot finalize the release, arrange for an authorized PMC member
+to run the finalize step after the vote passes.
 
 ### Local tools
 
@@ -105,14 +99,14 @@ creating the RC. Verify that the public distribution copy contains the key:
 
 ```bash
 curl --fail --location --output KEYS \
-  https://downloads.apache.org/incubator/auron/KEYS
+  https://downloads.apache.org/auron/KEYS
 gpg --show-keys --with-fingerprint KEYS
 ```
 
 The distribution repositories are:
 
-- staging: `https://dist.apache.org/repos/dist/dev/incubator/auron/`
-- official releases: `https://dist.apache.org/repos/dist/release/incubator/auron/`
+- staging: `https://dist.apache.org/repos/dist/dev/auron/`
+- official releases: `https://dist.apache.org/repos/dist/release/auron/`
 
 Keep the `KEYS` content consistent in both locations. Updating `dist/release` requires
 the corresponding SVN permission.
@@ -134,13 +128,12 @@ Open a GitHub issue for the release. Record the RM, proposed scope, target date,
 release, compatibility notes, and this checklist. Resolve release blockers before
 cutting an RC.
 
-Define these variables in the Auron source checkout. `RELEASE_VERSION` excludes both
-`incubating` and the RC suffix; `RELEASE_VERSION_FULL` is the value stored in
-`pom.xml` and used in the source artifact name.
+Define these variables in the Auron source checkout. `RELEASE_VERSION` is the version
+stored in `pom.xml` and used in the source artifact name.
 
 ```bash
 export RELEASE_VERSION="X.Y.Z"
-export RELEASE_VERSION_FULL="${RELEASE_VERSION}-incubating"
+export RELEASE_VERSION_FULL="${RELEASE_VERSION}"
 export RC_NUMBER="0"
 export GIT_TAG="v${RELEASE_VERSION}-rc${RC_NUMBER}"
 export RC_DIRECTORY="v${RELEASE_VERSION_FULL}-rc${RC_NUMBER}"
@@ -149,8 +142,8 @@ export NEXT_VERSION="NEXT_VERSION-SNAPSHOT"
 export ASF_ID="your-apache-id"
 export GPG_FINGERPRINT="YOUR_FULL_40_CHARACTER_FINGERPRINT"
 
-export STAGING_BASE="https://dist.apache.org/repos/dist/dev/incubator/auron"
-export RELEASE_BASE="https://dist.apache.org/repos/dist/release/incubator/auron"
+export STAGING_BASE="https://dist.apache.org/repos/dist/dev/auron"
+export RELEASE_BASE="https://dist.apache.org/repos/dist/release/auron"
 export STAGING_URL="${STAGING_BASE}/${RC_DIRECTORY}"
 export RELEASE_DIR="auron-${RELEASE_VERSION_FULL}"
 export SOURCE_FILE="apache-auron-${RELEASE_VERSION_FULL}-source.tgz"
@@ -165,7 +158,6 @@ before using the block. As the release progresses, record these additional value
 | `RELEASE_COMMIT` | After the preparation PR is merged |
 | `VOTE_CLOSE_TIME`, `VOTE_TIMEZONE` | Before sending the community vote |
 | `AURON_VOTE_THREAD`, `AURON_RESULT_THREAD` | After the community emails are archived |
-| `IPMC_VOTE_CLOSE_TIME`, `IPMC_VOTE_THREAD` | During the IPMC vote |
 | Vote-count and voter-name variables | When drafting each result email |
 | `OLD_RC_DIRECTORY` | When removing an obsolete candidate |
 
@@ -184,9 +176,8 @@ printf '%s\n' \
 ::: warning Script-derived values
 `build/release/release.sh` reads the release version directly from
 `<project.version>` in `pom.xml` and constructs the SVN staging directory as
-`v${RELEASE_VERSION_FULL}-rcN`. This is intentionally different from Auron's Git tag,
-`v${RELEASE_VERSION}-rcN`. Keep `GIT_TAG` and `RC_DIRECTORY` distinct throughout the
-release.
+`v${RELEASE_VERSION_FULL}-rcN`. Keep `GIT_TAG` and `RC_DIRECTORY` identical (both
+`vX.Y.Z-rcN`).
 :::
 
 ## 3. Prepare the source release
@@ -234,8 +225,8 @@ Before tagging:
 - prepare release notes grouped consistently with previous Auron releases;
 - acknowledge PR authors accurately;
 - review compatibility, upgrade, configuration, and known-issue notes;
-- verify that `LICENSE`, `NOTICE`, and `DISCLAIMER` are present and correct for the exact
-  source archive contents;
+- verify that `LICENSE` and `NOTICE` are present and correct for the exact source archive
+  contents;
 - confirm source files have appropriate ASF license headers;
 - confirm generated output, dependency caches, credentials, and compiled artifacts are
   not tracked.
@@ -325,8 +316,8 @@ tag, or alter a signature/checksum. Cancel the vote and create `rcN+1` instead.
 ## 5. Verify the release candidate
 
 Perform verification in a new temporary directory and preferably on more than one
-platform. Binding IPMC voters must download and verify the signed source package on
-their own hardware before voting `+1`.
+platform. PMC voters must download and verify the signed source package on their own
+hardware before voting `+1`.
 
 ### Download the exact staged files
 
@@ -383,8 +374,9 @@ cd "source/apache-auron-${RELEASE_VERSION_FULL}-source"
 
 Verify:
 
-- exactly one top-level directory exists and its name includes `incubating`;
-- `LICENSE`, `NOTICE`, and `DISCLAIMER` exist at the archive root and match its contents;
+- exactly one top-level directory exists and its name matches
+  `apache-auron-${RELEASE_VERSION_FULL}-source`;
+- `LICENSE` and `NOTICE` exist at the archive root and match its contents;
 - source headers are correct;
 - no credentials, VCS metadata, caches, or editor files are present;
 - no unexpected compiled files such as `.class`, `.jar`, `.so`, `.dll`, or `.dylib` are
@@ -447,20 +439,19 @@ Send a new plain-text email to `dev@auron.apache.org`. The vote is public and sh
 remain open for at least 72 hours. Use an explicit closing timestamp and timezone; do
 not rely only on “72 hours from now.”
 
-For the Auron community decision, list PPMC approval votes separately from other
-community votes. Under the current Auron process, proceed when the vote has remained
-open for at least 72 hours, has at least three PPMC `+1` approval votes, and has more
-PPMC `+1` than PPMC `-1` votes. Do not describe PPMC membership alone as ASF binding
-release approval. If a voter is also an IPMC member, note that fact separately.
+PMC member votes are binding for ASF release approval. List PMC binding votes separately
+from other community votes. Under the current Auron process, proceed when the vote has
+remained open for at least 72 hours, at least three PMC members have cast binding `+1`
+votes, and binding `+1` votes outnumber binding `-1` votes.
 
 ### Community `[VOTE]` template
 
 ```text
-Subject: [VOTE] Release Apache Auron (Incubating) ${RC_DIRECTORY}
+Subject: [VOTE] Release Apache Auron ${RC_DIRECTORY}
 
 Hello Auron community,
 
-This is a call for vote to release Apache Auron (Incubating)
+This is a call for vote to release Apache Auron
 ${RELEASE_VERSION_FULL}, release candidate ${RC_DIRECTORY}.
 
 The release candidate:
@@ -498,9 +489,6 @@ Please vote:
 [ ] +0 no opinion
 [ ] -1 disapprove (please explain the concern)
 
-Release checklist:
-https://cwiki.apache.org/confluence/display/INCUBATOR/Incubator+Release+Checklist
-
 Verification guidance:
 https://www.apache.org/info/verification.html
 
@@ -516,25 +504,25 @@ readers cannot expand shell variables.
 After the stated deadline:
 
 1. Review the complete thread, including late corrections and withdrawn votes.
-2. Verify PPMC membership from the current Auron roster.
-3. Verify IPMC membership separately before marking anyone as an ASF binding voter.
-4. List PPMC approval votes and other community votes separately.
-5. Reply in the original thread with the result; do not silently close the vote.
+2. Verify PMC membership from the current Auron roster.
+3. List PMC binding votes and other community votes separately.
+4. Reply in the original thread with the result; do not silently close the vote.
 
 ### Community `[RESULT][VOTE]` template
 
 ```text
-Subject: [RESULT][VOTE] Release Apache Auron (Incubating) ${RC_DIRECTORY}
+Subject: [RESULT][VOTE] Release Apache Auron ${RC_DIRECTORY}
 
 Hello Auron community,
 
-The Auron community vote to release Apache Auron (Incubating)
-${RELEASE_VERSION_FULL}, release candidate ${RC_DIRECTORY}, has concluded.
+The Auron community vote to release Apache Auron
+${RELEASE_VERSION_FULL}, release candidate ${RC_DIRECTORY}, has
+concluded.
 
-PPMC approval votes:
-+1 ${PPMC_VOTER_1}
-+1 ${PPMC_VOTER_2}
-+1 ${PPMC_VOTER_3}
+Binding votes (PMC members):
++1 ${PMC_VOTER_1}
++1 ${PMC_VOTER_2}
++1 ${PMC_VOTER_3}
 
 Other community votes (non-binding):
 +1 ${COMMUNITY_VOTER_1}
@@ -545,14 +533,10 @@ None
 -1 votes:
 None
 
-Any voters who are also IPMC members:
-${IPMC_VOTERS_OR_NONE}
-
 Vote thread:
 ${AURON_VOTE_THREAD}
 
-The Auron community approves submitting this release candidate to the
-Incubator PMC for ASF release approval.
+The Auron community approves this release candidate.
 
 Thanks,
 ${RELEASE_MANAGER}
@@ -561,129 +545,12 @@ ${RELEASE_MANAGER}
 Adjust the lists and totals to the actual thread. Do not say “no `-1`” if a negative vote
 was cast and later resolved or withdrawn; describe what happened and link to the reply.
 
-## 7. Incubator PMC vote
-
-After the Auron community approves the RC, send a new plain-text vote email to
-`general@incubator.apache.org`. Link both the community vote and its result. This is the
-ASF binding approval stage: only IPMC member votes are binding.
-
-It is acceptable to invite people to **review and vote**. Do not privately ask for an
-unconditional `+1`; each binding voter must independently download, verify, build, and
-test the signed source package.
-
-### IPMC `[VOTE]` template
-
-```text
-Subject: [VOTE] Release Apache Auron (Incubating) ${RC_DIRECTORY}
-
-Hello Incubator Community,
-
-The Apache Auron community has voted on and approved the release of
-Apache Auron (Incubating) ${RELEASE_VERSION_FULL}, release candidate
-${RC_DIRECTORY}.
-
-We now request the Incubator PMC to review and vote on this release
-candidate.
-
-Auron community vote thread:
-${AURON_VOTE_THREAD}
-
-Auron community vote result thread:
-${AURON_RESULT_THREAD}
-
-The release candidate:
-${STAGING_URL}/
-
-Release artifacts:
-- ${SOURCE_FILE}
-- ${SOURCE_FILE}.asc
-- ${SOURCE_FILE}.sha512
-
-Git tag:
-https://github.com/apache/auron/releases/tag/${GIT_TAG}
-
-Git commit:
-${RELEASE_COMMIT}
-
-GPG fingerprint:
-${GPG_FINGERPRINT}
-
-KEYS:
-${STAGING_BASE}/KEYS
-
-Changelog:
-https://github.com/apache/auron/compare/${PREVIOUS_TAG}...${GIT_TAG}
-
-The vote will remain open for at least 72 hours and will close at:
-${IPMC_VOTE_CLOSE_TIME} (${VOTE_TIMEZONE})
-
-Please vote:
-[ ] +1 approve
-[ ] +0 no opinion
-[ ] -1 disapprove (please explain the concern)
-
-Incubator release checklist:
-https://cwiki.apache.org/confluence/display/INCUBATOR/Incubator+Release+Checklist
-
-Verification guidance:
-https://www.apache.org/info/verification.html
-
-Thanks,
-${RELEASE_MANAGER}
-On behalf of the Apache Auron (Incubating) community
-```
-
-### Determine whether the IPMC vote passes
-
-After at least 72 hours:
-
-- verify each claimed binding voter against the current IPMC roster;
-- require at least three binding `+1` votes;
-- require more binding `+1` votes than binding `-1` votes;
-- record all non-binding votes as valuable community review;
-- investigate and respond to every negative vote;
-- publish the result in the original IPMC thread.
-
-### IPMC `[RESULT][VOTE]` template
-
-```text
-Subject: [RESULT][VOTE] Release Apache Auron (Incubating) ${RC_DIRECTORY}
-
-Hello Incubator Community,
-
-The vote to release Apache Auron (Incubating) ${RELEASE_VERSION_FULL},
-release candidate ${RC_DIRECTORY}, has passed with ${BINDING_PLUS_ONE_COUNT}
-binding +1 votes, ${BINDING_ZERO_COUNT} binding +0 votes, and
-${BINDING_MINUS_ONE_COUNT} binding -1 votes.
-
-Binding votes (IPMC members):
-+1 ${IPMC_VOTER_1}
-+1 ${IPMC_VOTER_2}
-+1 ${IPMC_VOTER_3}
-
-Non-binding votes:
-+1 ${NON_BINDING_VOTER_1}
-
-Vote thread:
-${IPMC_VOTE_THREAD}
-
-Thanks for reviewing and voting on the release candidate. We will now
-publish the approved artifacts and send the release announcement.
-
-Thanks,
-${RELEASE_MANAGER}
-On behalf of the Apache Auron (Incubating) community
-```
-
-Replace the example lists with the real votes. If there were `+0`, `-1`, withdrawn, or
-ambiguous votes, report them accurately rather than retaining the example wording.
-
-## 8. Finalize the release
+## 7. Finalize the release
 
 ::: danger Irreversible publication step
-Do not run `finalize` until the Auron community result and the passing IPMC result are
-publicly archived. Check the exact RC tag, commit, source filename, GPG fingerprint, and
-SVN staging revision again. The script performs an SVN move into `dist/release`.
+Do not run `finalize` until the Auron community result is publicly archived. Check the
+exact RC tag, commit, source filename, GPG fingerprint, and SVN staging revision again.
+The script performs an SVN move into `dist/release`.
 :::
 
 Re-verify the staged artifact immediately before promotion. Then run from the same Auron
@@ -721,9 +588,9 @@ svn list "${RELEASE_BASE}/auron-${RELEASE_VERSION_FULL}/"
 ```
 
 Do not manually rebuild or re-sign after promotion. The public artifact must be the exact
-artifact approved by the votes.
+artifact approved by the vote.
 
-## 9. Wait for public distribution
+## 8. Wait for public distribution
 
 The canonical public distribution is `downloads.apache.org`; the CDN is
 `dlcdn.apache.org`. Directory listings and the download helper may be cached even after
@@ -733,34 +600,34 @@ and waiting about one hour before announcing general availability.
 Verify all three public files:
 
 ```text
-https://downloads.apache.org/incubator/auron/auron-${RELEASE_VERSION_FULL}/${SOURCE_FILE}
-https://downloads.apache.org/incubator/auron/auron-${RELEASE_VERSION_FULL}/${SOURCE_FILE}.asc
-https://downloads.apache.org/incubator/auron/auron-${RELEASE_VERSION_FULL}/${SOURCE_FILE}.sha512
+https://downloads.apache.org/auron/auron-${RELEASE_VERSION_FULL}/${SOURCE_FILE}
+https://downloads.apache.org/auron/auron-${RELEASE_VERSION_FULL}/${SOURCE_FILE}.asc
+https://downloads.apache.org/auron/auron-${RELEASE_VERSION_FULL}/${SOURCE_FILE}.sha512
 ```
 
 Use the Apache download helper for the source-download link on the website:
 
 ```text
-https://www.apache.org/dyn/closer.lua/incubator/auron/auron-${RELEASE_VERSION_FULL}/${SOURCE_FILE}
+https://www.apache.org/dyn/closer.lua/auron/auron-${RELEASE_VERSION_FULL}/${SOURCE_FILE}
 ```
 
 The helper may recommend a direct CDN URL such as:
 
 ```text
-https://dlcdn.apache.org/incubator/auron/auron-${RELEASE_VERSION_FULL}/${SOURCE_FILE}
+https://dlcdn.apache.org/auron/auron-${RELEASE_VERSION_FULL}/${SOURCE_FILE}
 ```
 
 Use `downloads.apache.org` HTTPS links for `KEYS`, `.asc`, and `.sha512`. Historical
 releases remain available from:
 
 ```text
-https://archive.apache.org/dist/incubator/auron/
+https://archive.apache.org/dist/auron/
 ```
 
 Do not announce until the source download, signature, checksum, and `KEYS` URLs work from
 a clean browser session.
 
-## 10. Publish the GitHub release and website
+## 9. Publish the GitHub release and website
 
 ### GitHub release
 
@@ -785,7 +652,7 @@ In `apache/auron-sites`:
 The release date shown on the website should be the date the release becomes publicly
 available, normally the announcement date—not the RC creation date or vote start date.
 
-## 11. Announce the release
+## 10. Announce the release
 
 Send the announcement only after the official files and website page are publicly
 available. Send a plain-text message to:
@@ -793,8 +660,7 @@ available. Send a plain-text message to:
 - `announce@apache.org`
 - `dev@auron.apache.org`
 
-You may also notify `general@incubator.apache.org` according to current Incubator
-practice. Do not copy `private@auron.apache.org`; release announcements are public.
+Do not copy `private@auron.apache.org`; release announcements are public.
 
 ::: warning Plain text is required
 Send the announcement as `text/plain`. Disable rich-text/HTML mode in the mail client.
@@ -805,12 +671,12 @@ line and use plain URLs.
 ### `[ANNOUNCE]` template
 
 ```text
-Subject: [ANNOUNCE] Apache Auron (Incubating) ${RELEASE_VERSION} available
+Subject: [ANNOUNCE] Apache Auron ${RELEASE_VERSION} available
 
 Hi all,
 
-The Apache Auron (Incubating) community is pleased to announce the
-release of Apache Auron (Incubating) ${RELEASE_VERSION}.
+The Apache Auron community is pleased to announce the
+release of Apache Auron ${RELEASE_VERSION}.
 
 Apache Auron is dedicated to improving the efficiency and elasticity of
 data-processing engines. It provides a high-performance native execution
@@ -836,14 +702,14 @@ Mailing list: dev@auron.apache.org
 
 Kind regards,
 ${RELEASE_MANAGER}
-On behalf of the Apache Auron (Incubating) community
+On behalf of the Apache Auron community
 ```
 
 Verify that the announcement appears in the ASF mailing-list archive. If a recipient
 rejects it, read the bounce details, correct the MIME format or sender issue, and resend;
 do not assume delivery from the local Sent folder.
 
-## 12. Post-release tasks
+## 11. Post-release tasks
 
 ### Move to the next development version
 
@@ -880,13 +746,12 @@ Record:
 - source artifact URL and SHA-512;
 - signing-key fingerprint;
 - Auron vote and result threads;
-- IPMC vote and result threads;
 - GitHub Release and website page;
 - announcement thread;
 - next-version PR;
 - cancelled RCs, corrections, or process improvements.
 
-## 13. Failure and recovery guide
+## 12. Failure and recovery guide
 
 | Situation | Required response |
 | --- | --- |
@@ -896,16 +761,16 @@ Record:
 | A vote has too few required approvals after 72 hours | Reply in the thread that the vote remains open and give a new explicit closing time. Do not announce a pass early. |
 | A voter posts `-1` | Acknowledge and investigate the concern. A release vote has no single-vote veto, but correctness and consensus matter; cancel the RC if its artifact or compliance is defective. |
 | A vote email has an incorrect link or value | Post a clearly labelled correction in the same thread. If the artifact being voted on is ambiguous, cancel and restart the vote. |
-| A voter or RM proposes changing the staged artifact | Do not change it. Any byte-level change requires a new RC and new votes. |
+| A voter or RM proposes changing the staged artifact | Do not change it. Any byte-level change requires a new RC and a new vote. |
 | A vote was sent as a new thread accidentally | Reply with links that establish the authoritative thread, or restart if the record is ambiguous. Keep all corrections public. |
 | `finalize` fails | Inspect both SVN URLs and the SVN revision before retrying. Determine whether the move was partially or fully committed. Never rerun blindly. |
-| The wrong RC was finalized | Notify the Auron PPMC, mentors, and IPMC immediately. Follow ASF/Infra guidance to withdraw it; never silently overwrite it. |
+| The wrong RC was finalized | Notify the Auron PMC and ASF Infrastructure immediately. Follow ASF/Infra guidance to withdraw it; never silently overwrite it. |
 | Public mirrors have not updated | Delay the website switch and announcement. Check `downloads.apache.org`, then allow the documented cache interval before retesting. |
 | `announce@apache.org` rejects the message | Read the bounce, convert the email to plain text, verify the sender and recipients, and resend. Confirm delivery in the archive. |
 | The announcement contains a material error | Send a concise `[CORRECTION]` message to the same public lists and retain links to both messages. |
 | The RM cannot continue | Announce the handoff on `dev@auron.apache.org`. Give the new RM all public commit, artifact, vote, and SVN references, but no passwords or private keys. |
 
-## 14. Release Manager checklist
+## 13. Release Manager checklist
 
 ### Preparation
 
@@ -913,7 +778,7 @@ Record:
 - [ ] Release variables expand to the intended names and URLs.
 - [ ] GPG fingerprint is published in Auron `KEYS`.
 - [ ] Required Git and SVN permissions are confirmed.
-- [ ] Version, release notes, `LICENSE`, `NOTICE`, and `DISCLAIMER` are reviewed.
+- [ ] Version, release notes, `LICENSE`, and `NOTICE` are reviewed.
 - [ ] Formatting, tests, and clean source builds pass.
 - [ ] The RC tag points to the reviewed release commit and will not move.
 
@@ -927,15 +792,13 @@ Record:
 - [ ] Archive content matches the RC tag.
 - [ ] A clean build from the source archive succeeds.
 
-### Votes
+### Vote
 
 - [ ] Auron community vote stayed open for at least 72 hours.
-- [ ] The Auron result distinguishes PPMC approval from other community votes.
-- [ ] The Auron vote and result thread links are recorded.
-- [ ] IPMC vote stayed open for at least 72 hours.
-- [ ] At least three IPMC binding `+1` votes were verified.
+- [ ] At least three PMC binding `+1` votes were verified.
 - [ ] Binding `+1` votes outnumber binding `-1` votes.
-- [ ] The IPMC result thread is public and recorded.
+- [ ] The result distinguishes PMC binding votes from other community votes.
+- [ ] The Auron vote and result thread links are recorded.
 
 ### Publication
 
@@ -957,10 +820,6 @@ Record:
 - [ASF Release Distribution Policy](https://infra.apache.org/release-distribution.html)
 - [ASF Release Download Pages](https://infra.apache.org/release-download-pages.html)
 - [ASF Verification Guide](https://www.apache.org/info/verification.html)
-- [Incubator Release Management](https://incubator.apache.org/guides/releasemanagement.html)
-- [Incubator PPMC and Binding Votes](https://incubator.apache.org/guides/ppmc.html#ppmc-and-binding-votes)
-- [Incubator Release Checklist](https://cwiki.apache.org/confluence/display/INCUBATOR/Incubator+Release+Checklist)
 - [Auron source repository](https://github.com/apache/auron)
 - [Auron mailing-list archives](https://lists.apache.org/list.html?dev@auron.apache.org)
-- [Incubator general-list archives](https://lists.apache.org/list.html?general@incubator.apache.org)
 - [Auron release archive](/archives/all-releases)

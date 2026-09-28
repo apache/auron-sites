@@ -42,7 +42,7 @@ const sidebar: SidebarOptions = [
     prefix: 'community',
     children: [
       '/community/committer',
-      '/community/ppmc',
+      '/community/pmc',
       '/community/release-guide',
     ]
   },
@@ -75,7 +75,7 @@ const navbar: NavbarOptions = [
   ]},
   { text: 'Community', children: [
     { text: 'Become a Committer', link: '/community/committer' },
-    { text: 'Become a PPMC Member', link: '/community/ppmc' },
+    { text: 'Become a PMC Member', link: '/community/pmc' },
     { text: 'Release Guide', link: '/community/release-guide' },
   ]},
   { text: 'Archives', children: [
@@ -108,7 +108,7 @@ export default defineUserConfig({
   head: [
     ['link', { rel: 'icon', href: '/logo-mini.png' }]
   ],
-  title: 'Apache Auron™ (Incubating)',
+  title: 'Apache Auron™',
   theme: defaultTheme({
     logo: '/logo-mini.png',
     home: '/',

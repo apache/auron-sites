@@ -14,7 +14,7 @@
 # limitations under the License.
 
 github:
-  description: "Apache Auron (Incubating) Site"
+  description: "Apache Auron Site"
   homepage: https://auron.apache.org/
   labels:
     - auron
