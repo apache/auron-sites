@@ -43,7 +43,7 @@ contributions are recognized, not only through code:
 - **Code** — design, implement, review, test, and maintain project software.
 
 Apache Auron strives to be a meritocratic community. After someone has contributed
-consistently in one or more CoPDoC areas, the PPMC may invite that person to become a
+consistently in one or more CoPDoC areas, the PMC may invite that person to become a
 committer. Committership is not limited to writing code: it recognizes a sustained
 commitment to the project and its community.
 
@@ -77,4 +77,4 @@ large contribution.
 - Promote the project through articles, talks, events, or other community work.
 
 For additional guidance, see the
-[ASF Committer Guide](https://incubator.apache.org/guides/committer.html).
+[ASF Committer Guide](https://www.apache.org/dev/new-committers-guide.html).
