@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="544" viewBox="0 0 1240 544" role="img" aria-labelledby="title desc">
+  <title id="title">Spark container and JVM memory budgets</title>
+  <desc id="desc">A container includes the executor JVM and any other processes. Top braces label spark.executor.memory over the JVM heap, spark.memory.offHeap.size over an optional Spark-managed off-heap pool inside the JVM process, and spark.executor.memoryOverhead over other outside-heap uses and other processes. Green highlights identify Auron heap spill buffers inside the heap and Auron native allocations outside it. The scopes are conceptual, not fixed physical partitions. Python-specific budgeting is omitted.</desc>
+  <rect width="1240" height="544" rx="12" fill="#ffffff"/>
+  <g font-family="Arial, sans-serif" font-size="19" fill="#334155">
+    <g font-family="monospace" font-size="18" text-anchor="middle">
+      <text x="180" y="40">spark.executor.memory</text>
+      <text x="468" y="40">spark.memory.offHeap.size</text>
+      <text x="908" y="40">spark.executor.memoryOverhead</text>
+    </g>
+    <g font-size="18" text-anchor="middle" fill="#64748b">
+      <text x="180" y="72">Maximum JVM heap (-Xmx)</text>
+      <text x="468" y="72">Only when off-heap is enabled</text>
+      <text x="908" y="72">Outside-heap and other-process allowance</text>
+    </g>
+    <g fill="none" stroke="#64748b" stroke-width="1.5">
+      <path d="M 48 124 Q 48 112 60 112 H 168 Q 180 112 180 100 Q 180 112 192 112 H 300 Q 312 112 312 124"/>
+      <path d="M 336 124 Q 336 112 348 112 H 456 Q 468 112 468 100 Q 468 112 480 112 H 588 Q 600 112 600 124" stroke-dasharray="5 4"/>
+      <path d="M 624 124 Q 624 112 636 112 H 896 Q 908 112 908 100 Q 908 112 920 112 H 1180 Q 1192 112 1192 124"/>
+    </g>
+    <rect x="16" y="150" width="1208" height="376" rx="12" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+    <text x="40" y="180" font-size="22" font-weight="bold">Executor container</text>
+    <rect x="32" y="194" width="872" height="302" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+    <text x="56" y="224" font-size="22" font-weight="bold">JVM process</text>
+    <rect x="720" y="209" width="14" height="14" rx="3" fill="#d1fae5" stroke="#0f766e" stroke-width="1.5"/>
+    <text x="744" y="224" font-weight="bold" fill="#065f46">Auron memory</text>
+    <g fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5">
+      <rect x="48" y="246" width="264" height="196" rx="8"/>
+      <rect x="336" y="246" width="264" height="196" rx="8" stroke-dasharray="5 4"/>
+      <rect x="624" y="246" width="264" height="196" rx="8"/>
+      <rect x="928" y="246" width="264" height="196" rx="8" stroke-dasharray="5 4"/>
+    </g>
+    <g font-size="22" font-weight="bold">
+      <text x="64" y="278">JVM heap</text>
+      <text x="352" y="278">Spark off-heap pool</text>
+      <text x="640" y="278">Other outside-heap</text>
+      <text x="944" y="278">Other processes</text>
+    </g>
+    <text x="64" y="313">Spark execution / storage</text>
+    <text x="64" y="385">Other Java objects</text>
+    <text x="352" y="313">Execution / storage</text>
+    <text x="640" y="349">Java direct buffers</text>
+    <text x="640" y="385">JVM internals, stacks</text>
+    <text x="640" y="421">Allocator overhead</text>
+    <text x="944" y="313">If present</text>
+    <text x="944" y="349">Outside the JVM</text>
+    <g fill="#d1fae5" stroke="#0f766e" stroke-width="1.5">
+      <rect x="56" y="326" width="248" height="36" rx="6"/>
+      <rect x="632" y="290" width="248" height="36" rx="6"/>
+    </g>
+    <g font-weight="bold" fill="#065f46">
+      <text x="64" y="349">Auron heap spill buffers</text>
+      <text x="640" y="313">Auron native allocations</text>
+    </g>
+    <text x="56" y="477" font-size="18" fill="#64748b">Process RSS includes resident memory across all three JVM areas.</text>
+  </g>
+</svg>
