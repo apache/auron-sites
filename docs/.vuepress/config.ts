@@ -34,6 +34,7 @@ const sidebar: SidebarOptions = [
     children: [
       '/documents/getting-started',
       '/documents/configuration',
+      '/documents/spark-memory-management',
       '/documents/benchmarks'
     ]
   },
@@ -71,6 +72,7 @@ const navbar: NavbarOptions = [
   { text: 'Documentations', children: [
     { text: 'Getting Started', link: '/documents/getting-started' },
     { text: 'Configuration', link: '/documents/configuration' },
+    { text: 'Spark Memory Management', link: '/documents/spark-memory-management' },
     { text: 'Benchmarks', link: '/documents/benchmarks' },
   ]},
   { text: 'Community', children: [
