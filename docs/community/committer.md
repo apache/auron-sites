@@ -9,9 +9,11 @@ title: Become a Committer
 | Name | Apache ID | Inc |
 | --- | --- | --- |
 | Shaoyun Chen | `csy` | Trip.com Group Limited |
+| Yizhong Zhang | `deegue` | Kuaishou Technology |
 | Fei Wang | `feiwang` | eBay Inc. |
 | Gui Huawen | `guihuawen` | Didi Global Inc |
 | Hao Li | `lihao` | Kuaishou Technology |
+| Linfeng Li | `linfengli` | Ant Group |
 | Yuance Li | `liyuance` | Kuaishou Technology |
 | Ruilei Ma | `maruilei` | 58.Com Inc |
 | Ming Wei | `mingwei` | Didi Global Inc |
