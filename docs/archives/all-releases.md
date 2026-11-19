@@ -12,6 +12,13 @@ title: All Archived Releases
     <th>Signature</th>
   </tr>
   <tr>
+    <td>9.0.0</td>
+    <td>Nov 19 2026</td>
+    <td><a href="https://www.apache.org/dyn/closer.lua/auron/auron-9.0.0/apache-auron-9.0.0-source.tgz" target="_blank">download</a> </td>
+    <td><a href="https://downloads.apache.org/auron/auron-9.0.0/apache-auron-9.0.0-source.tgz.sha512" target="_blank">sha512</a> </td>
+    <td><a href="https://downloads.apache.org/auron/auron-9.0.0/apache-auron-9.0.0-source.tgz.asc" target="_blank">asc</a> </td>
+  </tr>
+  <tr>
     <td>8.0.0-incubating</td>
     <td>Jul 18 2026</td>
     <td><a href="https://www.apache.org/dyn/closer.lua/auron/auron-8.0.0-incubating/apache-auron-8.0.0-incubating-source.tgz?action=download" target="_blank">download</a> </td>
